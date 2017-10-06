@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "clifford_signature" overload = "false">
+<short>Initialises the Clifford Algebra.</short>
+<long>
+<para>
+<code>clifford_signature(x,y)</code> initalises the signature of the Clifford Algebra being used. 
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> clifford_signature(2,2)
+>> clifford_signature(7,8)
+</precode>
+</examples>
+<!--<seealso>
+</seealso>
+<references>
+</references>-->
+</function>
+
+<!-- $Id$ -->

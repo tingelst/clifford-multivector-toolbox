@@ -1,0 +1,46 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>vertcat :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>vertcat</h2>
+<p>Horizontal concatenation.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>vertcat(x,y)</tt> vertically concatenates two elements,
+<tt>x</tt> and <tt>y</tt> into an array. Normally this function is not
+used directly (it implements concatenation with ;).
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(2,2)
+&gt;&gt; show(vertcat(e1,e2))
+ 
+e1 *
+ 
+     1
+     0
+
++ e2 *
+ 
+     0
+     1
+
+&gt;&gt; show([e1;e2])
+ 
+e1 *
+ 
+     1
+     0
+
++ e2 *
+ 
+     0
+     1
+</pre>
+
+<h2>See Also</h2>Clifford function: <a href="repmat.html">repmat</a><br>MATLAB&reg; function: <a href="matlab:doc vertcat">vertcat</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

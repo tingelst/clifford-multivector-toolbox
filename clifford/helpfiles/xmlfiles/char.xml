@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "char" overload = "true">
+<short>Create character array (string).</short>
+<long>
+<para>
+<code>char(x)</code> creates a text character string representing the input Clifford object, <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm
+ 
+x =
+ 
+   0.6133 e0
+ + 0.6223 e1 - 0.4845 e2
+ + 0.0434 e12
+ 
+>> class(x)
+
+ans =
+
+clifford
+
+>> x = char(x)
+
+x =
+
+   0.6133 e0 + 0.6223 e1 - 0.4845 e2 + 0.0434 e12
+
+>> class(x)
+
+ans =
+
+char
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "char"/>
+<matlabfun name = "class"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: char.xml 132 2017-05-17 16:53:51Z sangwine $ -->

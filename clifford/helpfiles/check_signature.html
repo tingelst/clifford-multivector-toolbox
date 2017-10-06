@@ -1,0 +1,42 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>check_signature :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>check_signature</h2>
+<p>Checks that the signature of an object x matches with the current signature 
+and raises an error if they do not match.</p>
+<h2>Description</h2>
+<p>
+<tt>check_signature(x)</tt> checks that the argument, <tt>x</tt>, 
+is an object which lies within the current Clifford Signature.
+</p>
+
+<h2>Examples</h2>
+When the signature is correct:
+<pre>
+&gt;&gt; clifford_signature(2,2)
+&gt;&gt; x = randm
+ 
+x =
+ 
+   0.0202 e0  
+ - 0.3506 e1   - 0.1745 e2   - 0.2495 e3   + 0.5525 e4  
+ - 0.1447 e12  + 0.1758 e13  - 0.0452 e14  + 0.2089 e23  - 0.1798 e24  - 0.3296 e34 
+ - 0.3344 e123 + 0.1148 e124 - 0.0417 e134 - 0.0461 e234
+ + 0.3336 e1234
+ 
+&gt;&gt; check_signature(x)
+&gt;&gt; 
+</pre>
+When the signature is incorrect (retaining the same x value from before):
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; check_signature(x)
+Error using clifford/check_signature (line 56)
+Clifford multivector has a signature different to that of the current Clifford algebra.
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="clifford_signature.html">clifford_signature</a>, <a href="get_signature.html">get_signature</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

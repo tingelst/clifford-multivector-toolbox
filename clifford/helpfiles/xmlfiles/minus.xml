@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "minus" overload = "true">
+<short>Subtraction.</short>
+<long>
+<para>
+<code>minus(x,y)</code> subtracts multivector <code>y</code> from
+multivector <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> e1 - e2
+ 
+ans =
+ 
+   1.0000 e1 - 1.0000 e2
+   
+>> minus(e1,e2)
+ 
+ans =
+ 
+   1.0000 e1 - 1.0000 e2
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "minus"/>
+<cliffun name = "bsxfun"/>
+<cliffun name = "plus"/>
+<cliffun name = "mtimes"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: minus.xml 132 2017-05-17 16:53:51Z sangwine $ -->

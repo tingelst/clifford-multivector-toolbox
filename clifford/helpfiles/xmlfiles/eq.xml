@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "eq" overload = "true">
+<short>==  Equal.</short>
+<long>
+<para>
+<code>eq(x,y)</code> returns a logical true or false value based on whether
+the input values <code>x</code> and <code>y</code> are equal. It can also be
+used to determine equality of array values.
+</para>
+</long>
+<examples>
+<precode>
+>> x = randm
+ 
+x =
+ 
+ - 0.7303 e0
+ + 0.6393 e1 + 0.2399 e2
+ - 0.0199 e12
+ 
+>> y = randm
+ 
+y =
+ 
+   0.0811 e0
+ - 0.6956 e1 - 0.0376 e2
+ + 0.7129 e12
+ 
+>> eq(x,x)
+
+ans =
+
+     1
+
+>> eq(x,y)
+
+ans =
+
+     0
+</precode>
+Array equality:
+<precode>
+>> a  = [x,y,x,y]
+ 
+a =
+ 
+     1x4 Cl(1,1) multivector array
+	 
+>> z = [x,y,y,x]
+ 
+z =
+ 
+     1x4 Cl(1,1) multivector array
+	 
+>> eq(a,z)
+
+ans =
+
+     1     1     0     0
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "eq"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: eq.xml 132 2017-05-17 16:53:51Z sangwine $ -->

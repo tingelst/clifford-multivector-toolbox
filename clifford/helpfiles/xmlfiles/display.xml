@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "display" overload = "true">
+<short>Display array.</short>
+<long>
+<para>
+<code>display(x)</code> displays the value of the argument, <code>x</code>, 
+formatted in the style of value creation.
+</para>
+</long>
+<examples>
+For example if you had previously created value y:
+<precode>
+>> x = randm
+ 
+x =
+ 
+ - 0.9401 e0
+ - 0.2775 e1 - 0.0973 e2
+ + 0.1723 e12
+ 
+>> display(x)
+ 
+x =
+ 
+ - 0.9401 e0
+ - 0.2775 e1 - 0.0973 e2
+ + 0.1723 e12
+ 
+>> display(y)
+ 
+y =
+ 
+ - 0.1855 e0
+ + 0.3149 e1 + 0.2783 e2
+ - 0.8882 e12
+ 
+>> clifford_signature(1,1)
+>> x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> display(x)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "display"/>
+<cliffun name = "show"/>
+<cliffun name = "dump"/>
+<cliffun name = "disp"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: display.xml 132 2017-05-17 16:53:51Z sangwine $ -->

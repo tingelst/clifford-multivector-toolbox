@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "mtimes" overload = "true">
+<short>* Matrix multiply.</short>
+<long>
+<para>
+<code>mtimes(x,y)</code> multiplies matrix <code>x</code> by matrix <code>y</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> show(x)
+ 
+x =
+ 
+e0 *
+ 
+    0.3431    0.0616
+    0.3436    0.2573
+
++ e1 *
+ 
+    0.8827   -0.3682
+    0.8321    0.4196
+
++ e2 *
+ 
+    0.1413   -0.7727
+   -0.4335    0.3352
+
++ e12 *
+ 
+   -0.2884   -0.5134
+    0.0398   -0.8033
+
+>> y = [3,0;0,3]
+
+y =
+
+     3     0
+     0     3
+
+>> mtimes(x,y)
+ 
+ans =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> show(ans)
+ 
+ans =
+ 
+e0 *
+ 
+    1.0293    0.1848
+    1.0309    0.7720
+
++ e1 *
+ 
+    2.6480   -1.1045
+    2.4964    1.2589
+
++ e2 *
+ 
+    0.4239   -2.3180
+   -1.3005    1.0056
+
++ e12 *
+ 
+   -0.8652   -1.5403
+    0.1194   -2.4100
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "mtimes"/>
+<cliffun name = "bsxfun"/>
+<cliffun name = "rdivide"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: mtimes.xml 132 2017-05-17 16:53:51Z sangwine $ -->

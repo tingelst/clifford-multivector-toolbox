@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "ne" overload = "true">
+<short>~= Not equal.</short>
+<long>
+<para>
+<code>ne(x,y)</code> computes whether the arguments <code>x</code> and 
+<code>y</code> are unequal and returns true if they are.
+</para>
+</long>
+<examples>
+<precode>
+>> x = randm
+ 
+x =
+ 
+   0.7548 e0
+ + 0.1521 e1 + 0.6229 e2
+ + 0.1381 e12
+ 
+>> y = randm
+ 
+y =
+ 
+ - 0.6291 e0
+ + 0.5436 e1 + 0.0549 e2
+ - 0.5529 e12
+ 
+>> ne(x,x)
+
+ans =
+
+     0
+
+>> ne(x,y)
+
+ans =
+
+     1
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "ne"/>
+<cliffun name = "eq"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: ne.xml 132 2017-05-17 16:53:51Z sangwine $ -->

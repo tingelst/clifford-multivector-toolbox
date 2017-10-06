@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "diag" overload = "true">
+<short>Diagonal matrices and diagonals of a matrix.</short>
+<long>
+<para>
+<code>diag(x)</code> returns the elements on the main diagonal of a matrix <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+>> y = clifford(5,6,7,8)
+ 
+y =
+ 
+   5.0000 e0
+ + 6.0000 e1 + 7.0000 e2
+ + 8.0000 e12
+ 
+>> D = diag([x,y])
+ 
+D =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> show(D)
+ 
+D =
+ 
+e0 *
+ 
+     1     0
+     0     5
+
++ e1 *
+ 
+     2     0
+     0     6
+
++ e2 *
+ 
+     3     0
+     0     7
+
++ e12 *
+ 
+     4     0
+     0     8
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "diag"/>
+<cliffun name = "show"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: diag.xml 132 2017-05-17 16:53:51Z sangwine $ -->

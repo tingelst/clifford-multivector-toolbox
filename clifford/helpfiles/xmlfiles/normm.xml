@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "normm" overload = "false">
+<short>Norm of a multivector (norm of each element for arrays)</short>
+<long>
+<para>
+<code>norm(x)</code> computes the norm of a multivector or multivector array. "We get the norm |M| of a multivector as
+|M|2 = M * M̅ = ‹MM̅›0 = m2 0 + m2 1 + m2 2 + m2 12."[1]
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = 1*e0 - 2*e1 + 3*e2 - 4*e12
+ 
+x =
+ 
+   1.0000 e0
+ - 2.0000 e1 + 3.0000 e2
+ - 4.0000 e12
+ 
+>> normm(x)
+
+ans =
+
+    30
+</precode>
+</examples>
+<seealso>
+<cliffun name = "abs"/>
+</seealso>
+<references>
+<reference>
+<bold>Eckhard Hitzer</bold>, <italic>Introduction to Clifford's Geometric Algebra</italic>, 
+Journal of the Society of Instrument and Control Engineers, Vol. 51, No. 4, pp. 338-350, April 2012, (April 2012), 
+page 4, equation 40 <www>http://arxiv.org/pdf/1306.1660.pdf</www>
+</reference>
+</references>
+</function>
+
+<!-- $Id: normm.xml 92 2016-07-28 19:56:45Z sangwine $ -->

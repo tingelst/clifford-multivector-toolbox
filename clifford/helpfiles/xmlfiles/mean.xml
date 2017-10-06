@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "mean" overload = "true">
+<short>Average or mean value</short>
+<syntax>Y = mean(X, dim)</syntax>
+<long>
+<para>
+<code>mean(X, dim)</code> computes the mean values of the elements of the
+multivector array <code>X</code> along dimension <code>dim</code>. If
+omitted, <code>dim</code> defaults to the columns of <code>X</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> A = [e1 e2; e2 e1]
+ 
+A = 2x2 Cl(0,3) multivector array
+ 
+>> show(mean(A))
+ 
+e1 *
+ 
+    0.5000    0.5000
+
++ e2 *
+ 
+    0.5000    0.5000
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "mean"/>
+</seealso>
+</function>
+
+<!-- $Id: mean.xml 132 2017-05-17 16:53:51Z sangwine $ -->

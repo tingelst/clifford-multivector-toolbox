@@ -1,0 +1,104 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>rdivide :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>rdivide</h2>
+<p>./  Right array divide.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>rdivide(x,y)</tt> divides element <tt>x</tt> by element <tt>y</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+&gt;&gt; y = clifford(5,6,7,8)
+ 
+y =
+ 
+   5.0000 e0
+ + 6.0000 e1 + 7.0000 e2
+ + 8.0000 e12
+ 
+&gt;&gt; rdivide(x,y)
+ 
+ans =
+ 
+   0.6923 e0
+ - 0.3077 e1 - 0.6154 e2
+ - 0.6154 e12
+ 
+&gt;&gt; rdivide(y,x)
+ 
+ans =
+ 
+   1.8000 e0
+ + 0.8000 e1 + 1.6000 e2
+ + 1.6000 e12
+ 
+&gt;&gt; a = [x,y]
+ 
+a =
+ 
+     1x2 Cl(1,1) multivector array
+ 
+&gt;&gt; show(a)
+ 
+a =
+ 
+e0 *
+ 
+     1     5
+
++ e1 *
+ 
+     2     6
+
++ e2 *
+ 
+     3     7
+
++ e12 *
+ 
+     4     8
+
+&gt;&gt; rdivide(a,x)
+ 
+ans =
+ 
+     1x2 Cl(1,1) multivector array
+ 
+&gt;&gt; show(ans)
+ 
+ans =
+ 
+e0 *
+ 
+    1.0000    1.8000
+
++ e1 *
+ 
+    0.0000    0.8000
+
++ e2 *
+ 
+         0    1.6000
+
++ e12 *
+ 
+   -0.0000    1.6000
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc rdivide">rdivide</a><br>Clifford functions: <a href="mtimes.html">mtimes</a>, <a href="bsxfun.html">bsxfun</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

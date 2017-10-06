@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "ndims" overload = "true">
+<short>Number of array dimensions.</short>
+<long>
+<para>
+<code>ndims(x)</code> returns the number of dimensions within the argument
+array <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm(2,2,3)
+ 
+x =
+ 
+     2x2x3 Cl(1,1) multivector array
+ 
+>> ndims(x)
+
+ans =
+
+     3
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "ndims"/>
+<cliffun name = "length"/>
+<cliffun name = "numel"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: ndims.xml 132 2017-05-17 16:53:51Z sangwine $ -->

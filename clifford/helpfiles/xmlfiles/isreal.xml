@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "isreal" overload = "true">
+<short>True for real (clifford) array.</short>
+<long>
+<para>
+<code>isreal(x)</code> checks that all elements of a Clifford array 
+are real values and then returns logical true or false (1 or 0).
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm
+ 
+x =
+ 
+ - 0.0801 e0
+ - 0.8716 e1 - 0.2931 e2
+ - 0.3847 e12
+ 
+>> isreal(x)
+
+ans =
+
+     1
+
+>> x = e1 + i.*e2
+ 
+x =
+ 
+   1.0000 e1 + (0.0000+1.0000i) e2
+ 
+>> isreal(x)
+
+ans =
+
+     0
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "isreal"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: isreal.xml 132 2017-05-17 16:53:51Z sangwine $ -->

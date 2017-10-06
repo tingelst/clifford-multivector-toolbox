@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "subsref" overload = "true">
+<short>Subscripted reference</short>
+<long>
+<para>
+<code>x = subsref(a, ss)</code> is an overloading of a &matlab; function that plays
+an essential role in subscripted references. See the documentation on the
+&matlab; function for details, and the source code of the Clifford
+implementation.
+</para>
+</long>
+<seealso>
+<matlabfun name = "subsref"/>
+<cliffun name = "subsasgn"/>
+</seealso>
+</function>
+
+<!-- $Id: subsref.xml 132 2017-05-17 16:53:51Z sangwine $ -->

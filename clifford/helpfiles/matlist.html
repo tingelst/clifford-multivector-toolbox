@@ -1,0 +1,57 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Matlab&reg; Functions that work with Clifford multivector arrays</title>
+<link rel="stylesheet" href="clifstyle.css" type="text/css">
+</head>
+<body>
+<h1>Matlab&reg; functions that are known to work with Clifford multivectors</h1>
+<p>
+This list contains Matlab&reg; functions that are known to work with Clifford multivector arrays. 
+There are no Clifford documentation pages for these functions because there is no special Clifford code. 
+It is the Matlab&reg; code that runs, using Clifford overloadings of Matlab functions as needed. 
+It follows that these functions only work because the necessary functions are overloaded for Clifford arrays. 
+It is possible that some functions may cease to work if a new release of Matlab&reg; uses a different algorithm or a 
+new function that is not overloaded for multivectors. From release 1.2 of the Clifford toolbox we have
+included test code to 
+check for this, so in most cases we should be aware of the problem as soon as we have installed the new 
+Matlab&reg; version ourselves. If you find a function that ought to work, but which raises an error due to a 
+missing overload, contact us. Even better, try to implement the overloading yourself and let us have your 
+code to incorporate into the toolbox. Note the private functions overload.m and overloade.m, which in some 
+cases make implementation of an overloading trivial.
+</p>
+<p>The list given here may not be complete - please advise the toolbox
+authors of functions not listed here that work, or functions listed here that
+no longer work, and we will add them to the list or investigate the problem.
+Please tell us which Matlab&reg; release you are using.
+</p>
+<table>
+<tr><td><a href="matlab:doc circshift">circshift</a></td><td>Shift array circularly</td></tr>
+<tr><td><a href="matlab:doc cov">cov</a></td><td>Covariance</td></tr>
+<tr><td><a href="matlab:doc dot">dot</a></td><td>Vector dot product (using the Clifford conjugate)</td></tr>
+<tr><td><a href="matlab:doc flipdim">flipdim</a></td><td>Flip matrix along specified dimension</td></tr>
+<tr><td><a href="matlab:doc fliplr">fliplr</a></td><td>Flip matrix in left/right direction</td></tr>
+<tr><td><a href="matlab:doc flipud">flipud</a></td><td>Flip matrix in up/down direction</td></tr>
+<tr><td><a href="matlab:doc isequal">isequal</a></td><td>True if arrays are numerically equal</td></tr>
+<tr><td><a href="matlab:doc isscalar">isscalar</a></td><td>True if array is a scalar</td></tr>
+<tr><td><a href="matlab:doc iscolumn">iscolumn</a></td><td>True if array is a column vector</td></tr>
+<tr><td><a href="matlab:doc ismatrix">ismatrix</a></td><td>True if array is a matrix</td></tr>
+<tr><td><a href="matlab:doc isrow">isrow</a></td><td>True if array is a row vector</td></tr>
+<tr><td><a href="matlab:doc isvector">isvector</a></td><td>True if array is a vector</td></tr>
+<tr><td><a href="matlab:doc kron">kron</a></td><td>Kronecker product of two arrays</td></tr>
+<tr><td><a href="matlab:doc nchoosek">nchoosek</a></td><td>Combinations of a vector</td></tr>
+<tr><td><a href="matlab:doc perms">perms</a></td><td>Permutations</td></tr>
+<!-- <tr><td><a href="matlab:doc pinv">pinv</a></td><td>Pseudoinverse (quaternion arrays only)</td></tr> -->
+<!-- <tr><td><a href="matlab:doc rank">rank</a></td><td>Matrix rank (quaternion arrays only)</td></tr> -->
+<tr><td><a href="matlab:doc rot90">rot90</a></td><td>Rotate matrix 90 degrees</td></tr>
+<tr><td><a href="matlab:doc std">std</a></td><td>Standard deviation</td></tr>
+<tr><td><a href="matlab:doc trace">trace</a></td><td>Sum of diagonal elements</td></tr>
+<tr><td><a href="matlab:doc var">var</a></td><td>Variance</td></tr>
+</table>
+<h4>&copy; 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4>
+<p><a href="license.html">License terms.</a></p>
+</body>
+</html>
+
+<!-- $Id: matlist.html 127 2017-05-10 13:40:25Z sangwine $ -->

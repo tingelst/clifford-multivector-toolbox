@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "trivector" overload = "false">
+<short>Extracts the trivector component of a clifford multivector.</short>
+<long>
+<para>
+<code>trivector(x)</code> extracts the trivector part of a multivector, <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(2,2)
+>> x = clifford(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+ 
+x =
+ 
+   1.0000 e0  
+ + 2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+ + 16.0000 e1234
+ 
+>> trivector(x)
+ 
+ans =
+ 
+   12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+</precode>
+</examples>
+<seealso>
+<cliffun name = "bivector"/>
+<cliffun name = "even"/>
+<cliffun name = "grade"/>
+<cliffun name = "odd"/>
+<cliffun name = "pseudoscalar"/>
+<cliffun name = "scalar"/>
+<cliffun name = "vector"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: trivector.xml 92 2016-07-28 19:56:45Z sangwine $ -->

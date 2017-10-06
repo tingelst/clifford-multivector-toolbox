@@ -1,0 +1,47 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>isreal :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>isreal</h2>
+<p>True for real (clifford) array.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>isreal(x)</tt> checks that all elements of a Clifford array 
+are real values and then returns logical true or false (1 or 0).
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm
+ 
+x =
+ 
+ - 0.0801 e0
+ - 0.8716 e1 - 0.2931 e2
+ - 0.3847 e12
+ 
+&gt;&gt; isreal(x)
+
+ans =
+
+     1
+
+&gt;&gt; x = e1 + i.*e2
+ 
+x =
+ 
+   1.0000 e1 + (0.0000+1.0000i) e2
+ 
+&gt;&gt; isreal(x)
+
+ans =
+
+     0
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc isreal">isreal</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

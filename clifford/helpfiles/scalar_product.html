@@ -1,0 +1,54 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>scalar_product :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>scalar_product</h2>
+<p>Multivector scalar product. The two arguments must be the same size or one must be scalar. This is an elementwise operation if applied to arrays.</p>
+<h2>Description</h2>
+<p>
+<tt>scalar_product(x,y)</tt> computes the scalar product of two elements <tt>x</tt> and <tt>y</tt>. 
+This is a generalisation of the inner product of vectors. "The symmetric scalar part of the geometric product of two multivectors
+M, N &#8712; Cl(2, 0) is also called their scalar product and because of its fundamental importance denoted with a special product sign &#8727;
+M &#8727; N = &#8249;MN&#8250;0 = m0n0 + m1n1 + m2n2 &#8722; m12n12 = N &#8727; M"[1]
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+&gt;&gt; y = randm
+ 
+y =
+ 
+ - 0.9401 e0
+ - 0.2775 e1 - 0.0973 e2
+ + 0.1723 e12
+ 
+&gt;&gt; scalar_product(x,x)
+
+ans =
+
+   -20
+
+&gt;&gt; scalar_product(x,y)
+
+ans =
+
+   -1.8924
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="left_contraction.html">left_contraction</a>, <a href="right_contraction.html">right_contraction</a><br>
+<h2>References</h2><ol><li>
+<b>Eckhard Hitzer</b>, <i>Introduction to Clifford's Geometric Algebra</i>, 
+Journal of the Society of Instrument and Control Engineers, Vol. 51, No. 4, pp. 338-350, April 2012, (April 2012), 
+page 4, equation 38 <a href="http://arxiv.org/pdf/1306.1660.pdf">http://arxiv.org/pdf/1306.1660.pdf</a>
+</li></ol>
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

@@ -1,0 +1,66 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>diag :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>diag</h2>
+<p>Diagonal matrices and diagonals of a matrix.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>diag(x)</tt> returns the elements on the main diagonal of a matrix <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+&gt;&gt; y = clifford(5,6,7,8)
+ 
+y =
+ 
+   5.0000 e0
+ + 6.0000 e1 + 7.0000 e2
+ + 8.0000 e12
+ 
+&gt;&gt; D = diag([x,y])
+ 
+D =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+&gt;&gt; show(D)
+ 
+D =
+ 
+e0 *
+ 
+     1     0
+     0     5
+
++ e1 *
+ 
+     2     0
+     0     6
+
++ e2 *
+ 
+     3     0
+     0     7
+
++ e12 *
+ 
+     4     0
+     0     8
+</pre>
+
+<h2>See Also</h2>Clifford function: <a href="show.html">show</a><br>MATLAB&reg; function: <a href="matlab:doc diag">diag</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

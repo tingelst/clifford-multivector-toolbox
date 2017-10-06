@@ -1,0 +1,122 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>lu :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>lu</h2>
+<p>Lu decomposition of a matrix of multivectors.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>[y,z] = lu(x)</tt> decomposes the matrix <tt>x</tt> into a lower triangular matrix
+<tt>y</tt> and an upper triangular matrix <tt>z</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm(3)
+ 
+x =
+ 
+     3x3 Cl(1,1) multivector array
+ 
+&gt;&gt; show(x)
+ 
+x =
+ 
+e0 *
+ 
+    0.3856   -0.4347   -0.3785
+    0.1657    0.0788   -0.6083
+    0.1634   -0.3962    0.6994
+
++ e1 *
+ 
+   -0.7865   -0.1771   -0.6023
+   -0.0822   -0.7789   -0.5129
+   -0.5655   -0.8364   -0.1437
+
++ e2 *
+ 
+   -0.3025   -0.1490   -0.5650
+    0.9246   -0.3782    0.0153
+   -0.2675   -0.3673    0.5749
+
++ e12 *
+ 
+    0.3758    0.8703   -0.4180
+   -0.3331    0.4940    0.6055
+   -0.7629    0.0927   -0.3994
+
+&gt;&gt; [y,z] = lu(x)
+ 
+y =
+ 
+     3x3 Cl(1,1) multivector array
+ 
+ 
+z =
+ 
+     3x3 Cl(1,1) multivector array
+ 
+&gt;&gt; show(y)
+ 
+y =
+ 
+e0 *
+ 
+   -0.2031    1.0000         0
+    1.0000         0         0
+   -0.6813   -0.3649    1.0000
+
++ e1 *
+ 
+    0.1937         0         0
+         0         0         0
+   -1.1441   -0.6130         0
+
++ e2 *
+ 
+   -0.9150         0         0
+         0         0         0
+   -0.4200   -0.5805         0
+
++ e12 *
+ 
+    1.2331         0         0
+         0         0         0
+    0.6185   -0.6601         0
+
+&gt;&gt; show(z)
+ 
+z =
+ 
+e0 *
+ 
+    0.1657    0.0788   -0.6083
+         0   -0.5310   -1.1634
+         0         0    0.5759
+
++ e1 *
+ 
+   -0.0822   -0.7789   -0.5129
+         0   -0.3649   -0.0157
+         0         0    0.1238
+
++ e2 *
+ 
+    0.9246   -0.3782    0.0153
+         0   -1.2100   -1.8682
+         0         0   -0.0763
+
++ e12 *
+ 
+   -0.3331    0.4940    0.6055
+         0    1.6594    0.9214
+         0         0   -0.9457
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc lu">lu</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

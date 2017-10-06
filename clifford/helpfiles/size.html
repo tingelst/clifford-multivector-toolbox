@@ -1,0 +1,49 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>size :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>size</h2>
+<p>Size of matrix.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>size(x)</tt> returns the dimensions of a matrix <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm(4)
+ 
+x =
+ 
+     4x4 Cl(1,1) multivector array
+ 
+&gt;&gt; size(x)
+
+ans =
+
+     4     4
+
+&gt;&gt; x = randm(4)
+ 
+x =
+ 
+     4x4 Cl(1,1) multivector array
+ 
+&gt;&gt; [y,z] = size(x)
+
+y =
+
+     4
+
+
+z =
+
+     4
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc size">size</a><br>Clifford functions: <a href="length.html">length</a>, <a href="numel.html">numel</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

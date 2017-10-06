@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "abs" overload = "true">
+<short>Absolute value, or modulus of a multivector.</short>
+<long>
+<para>
+<code>abs(x)</code> returns the absolute value, or modulus of its argument, <code>x</code>.
+Applied to a matrix of multivectors it returns matrix of the moduli of all of its entries.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = clifford(1,-2,3,-4)
+ 
+x =
+ 
+   1.0000 e0
+ - 2.0000 e1 + 3.0000 e2
+ - 4.0000 e12
+ 
+>> abs(x)
+
+ans =
+
+    5.4772
+
+>> y = [x,x;x,x]
+ 
+y =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> abs(y)
+
+ans =
+
+    5.4772    5.4772
+    5.4772    5.4772
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "abs"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: abs.xml 132 2017-05-17 16:53:51Z sangwine $ -->

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "vertcat" overload = "true">
+<short>Horizontal concatenation.</short>
+<long>
+<para>
+<code>vertcat(x,y)</code> vertically concatenates two elements,
+<code>x</code> and <code>y</code> into an array. Normally this function is not
+used directly (it implements concatenation with ;).
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(2,2)
+>> show(vertcat(e1,e2))
+ 
+e1 *
+ 
+     1
+     0
+
++ e2 *
+ 
+     0
+     1
+
+>> show([e1;e2])
+ 
+e1 *
+ 
+     1
+     0
+
++ e2 *
+ 
+     0
+     1
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "vertcat"/>
+<cliffun name = "repmat"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: vertcat.xml 132 2017-05-17 16:53:51Z sangwine $ -->

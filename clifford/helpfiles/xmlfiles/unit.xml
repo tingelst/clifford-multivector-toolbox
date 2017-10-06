@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "unit" overload = "false">
+<short>multivector. Divides a multivector by its own modulus. The result is a multivector with unit modulus.</short>
+<long>
+<para>
+<code>unit(x)</code> divides multivector <code>x</code> by its own modulus and returns the multivector answer.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+>> unit(x)
+ 
+ans =
+ 
+   0.1826 e0
+ + 0.3651 e1 + 0.5477 e2
+ + 0.7303 e12
+</precode>
+</examples>
+<!--<seealso>
+</seealso>
+<references>
+</references>-->
+</function>
+
+<!-- $Id: unit.xml 92 2016-07-28 19:56:45Z sangwine $ -->

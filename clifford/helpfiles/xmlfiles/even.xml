@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "even" overload = "false">
+<short>Extracts the sum of the even grades of a clifford multivector.</short>
+<long>
+<para>
+<code>even(x)</code> extracts the sum of the even grades of a multivector, <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(3,0)
+>> x = randm
+ 
+x =
+ 
+   0.0986 e0 
+ - 0.1949 e1  + 0.1591 e2  + 0.2401 e3 
+ + 0.5559 e12 - 0.0630 e13 - 0.6943 e23
+ - 0.2726 e123
+ 
+>> even(x)
+ 
+ans =
+ 
+   0.0986 e0 
+ + 0.5559 e12 - 0.0630 e13 - 0.6943 e23
+ 
+>> clifford_signature(2,2)
+>> x = clifford(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+ 
+x =
+ 
+   1.0000 e0  
+ + 2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+ + 16.0000 e1234
+ 
+>> even(x)
+ 
+ans =
+ 
+   1.0000 e0  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 16.0000 e1234
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "add"/>
+<cliffun name = "bivector"/>
+<cliffun name = "part"/>
+<cliffun name = "scalar"/>
+<cliffun name = "pseudoscalar"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: even.xml 92 2016-07-28 19:56:45Z sangwine $ -->

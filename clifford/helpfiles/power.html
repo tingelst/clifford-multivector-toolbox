@@ -1,0 +1,59 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>power :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>power</h2>
+<p>.^   Array power.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>power(x,y)</tt> raises element <tt>x</tt> to power <tt>y</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+&gt;&gt; power(x,2)
+ 
+ans =
+ 
+   12.0000 e0
+ + 4.0000 e1 + 6.0000 e2
+ + 8.0000 e12
+ 
+&gt;&gt; x = randm
+ 
+x =
+ 
+   0.1554 e0
+ - 0.4396 e1 + 0.5084 e2
+ - 0.7239 e12
+ 
+&gt;&gt; power(x,2)
+ 
+ans =
+ 
+   0.4830 e0
+ - 0.1366 e1 + 0.1580 e2
+ - 0.2249 e12
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc power">power</a><br>Clifford functions: <a href="mpower.html">mpower</a>, <a href="inv.html">inv</a><br>
+<h2>References</h2><ol><li>
+Hitzer, E. and Sangwine, S. J.,
+'Multivector and multivector matrix inverses in real Clifford algebras',
+<i>Applied Mathematics and Computation</i>, in press, accepted 2 May 2017.
+A preprint version is available as:
+Technical Report CES-534, School of Computer Science and Electronic Engineering,
+University of Essex, 21 July 2016, available at: <a href="http://repository.essex.ac.uk/17282/">http://repository.essex.ac.uk/17282/</a>.
+</li></ol>
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

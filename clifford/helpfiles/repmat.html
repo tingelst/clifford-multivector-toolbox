@@ -1,0 +1,88 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>repmat :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>repmat</h2>
+<p>Replicate and tile an array.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p> 
+<h2>Description</h2>
+<p>
+<tt>repmat(x,y,z)</tt> repeats array <tt>x</tt>, in a grid of dimension <tt>y</tt> by <tt>z</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+&gt;&gt; show(x)
+ 
+x =
+ 
+e0 *
+ 
+    0.6666    0.2178
+   -0.0199   -0.1535
+
++ e1 *
+ 
+   -0.4914    0.3038
+   -0.9733   -0.1211
+
++ e2 *
+ 
+   -0.0950   -0.6885
+    0.1285   -0.3082
+
++ e12 *
+ 
+    0.5524   -0.6215
+    0.1894   -0.9310
+
+&gt;&gt; repmat(x,2,3)
+ 
+ans =
+ 
+     4x6 Cl(1,1) multivector array
+ 
+&gt;&gt; show(ans)
+ 
+ans =
+ 
+e0 *
+ 
+    0.6666    0.2178    0.6666    0.2178    0.6666    0.2178
+   -0.0199   -0.1535   -0.0199   -0.1535   -0.0199   -0.1535
+    0.6666    0.2178    0.6666    0.2178    0.6666    0.2178
+   -0.0199   -0.1535   -0.0199   -0.1535   -0.0199   -0.1535
+
++ e1 *
+ 
+   -0.4914    0.3038   -0.4914    0.3038   -0.4914    0.3038
+   -0.9733   -0.1211   -0.9733   -0.1211   -0.9733   -0.1211
+   -0.4914    0.3038   -0.4914    0.3038   -0.4914    0.3038
+   -0.9733   -0.1211   -0.9733   -0.1211   -0.9733   -0.1211
+
++ e2 *
+ 
+   -0.0950   -0.6885   -0.0950   -0.6885   -0.0950   -0.6885
+    0.1285   -0.3082    0.1285   -0.3082    0.1285   -0.3082
+   -0.0950   -0.6885   -0.0950   -0.6885   -0.0950   -0.6885
+    0.1285   -0.3082    0.1285   -0.3082    0.1285   -0.3082
+
++ e12 *
+ 
+    0.5524   -0.6215    0.5524   -0.6215    0.5524   -0.6215
+    0.1894   -0.9310    0.1894   -0.9310    0.1894   -0.9310
+    0.5524   -0.6215    0.5524   -0.6215    0.5524   -0.6215
+    0.1894   -0.9310    0.1894   -0.9310    0.1894   -0.9310
+</pre>
+
+<h2>See Also</h2>Clifford function: <a href="horzcat.html">horzcat</a><br>MATLAB&reg; function: <a href="matlab:doc repmat">repmat</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

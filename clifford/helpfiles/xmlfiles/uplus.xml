@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "uplus" overload = "true">
+<short>+  Unary plus.</short>
+<long>
+<para>
+<code>uplus(x)</code> is an alternative for using the statement <code>+x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = clifford(-1,2,-3,4)
+ 
+x =
+ 
+ - 1.0000 e0
+ + 2.0000 e1 - 3.0000 e2
+ + 4.0000 e12
+ 
+>> uplus(x)
+ 
+ans =
+ 
+ - 1.0000 e0
+ + 2.0000 e1 - 3.0000 e2
+ + 4.0000 e12
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "uplus"/>
+<cliffun name = "uminus"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: uplus.xml 132 2017-05-17 16:53:51Z sangwine $ -->

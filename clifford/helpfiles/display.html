@@ -1,0 +1,58 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>display :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>display</h2>
+<p>Display array.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>display(x)</tt> displays the value of the argument, <tt>x</tt>, 
+formatted in the style of value creation.
+</p>
+
+<h2>Examples</h2>
+For example if you had previously created value y:
+<pre>
+&gt;&gt; x = randm
+ 
+x =
+ 
+ - 0.9401 e0
+ - 0.2775 e1 - 0.0973 e2
+ + 0.1723 e12
+ 
+&gt;&gt; display(x)
+ 
+x =
+ 
+ - 0.9401 e0
+ - 0.2775 e1 - 0.0973 e2
+ + 0.1723 e12
+ 
+&gt;&gt; display(y)
+ 
+y =
+ 
+ - 0.1855 e0
+ + 0.3149 e1 + 0.2783 e2
+ - 0.8882 e12
+ 
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+&gt;&gt; display(x)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc display">display</a><br>Clifford functions: <a href="show.html">show</a>, <a href="dump.html">dump</a>, <a href="disp.html">disp</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

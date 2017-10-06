@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "grade_four_involution" overload = "false">
+<short>Computes the grade 4 involution of a clifford multivector.
+  This function negates the grade four elements of a multivector.</short>
+<long>
+<para>
+<code>grade_four_involution(x)</code> negates the grade four elements of a multivector <code>x</code>.
+</para>
+</long>
+<examples>
+In this example the pseudoscalar is the only grade 4 element, hence only the pseudoscalar
+element is negated.
+<precode>
+>> x = randm
+ 
+x =
+ 
+ - 0.1564 e0  
+ - 0.0418 e1   + 0.4945 e2   - 0.2878 e3   + 0.2623 e4  
+ + 0.1032 e12  - 0.0782 e13  - 0.3534 e14  - 0.0950 e23  - 0.0290 e24  - 0.4913 e34 
+ + 0.0643 e123 - 0.2749 e124 - 0.0315 e134 + 0.1124 e234
+ - 0.3025 e1234
+ 
+>> grade_four_involution(x)
+ 
+ans =
+ 
+ - 0.1564 e0  
+ - 0.0418 e1   + 0.4945 e2   - 0.2878 e3   + 0.2623 e4  
+ + 0.1032 e12  - 0.0782 e13  - 0.3534 e14  - 0.0950 e23  - 0.0290 e24  - 0.4913 e34 
+ + 0.0643 e123 - 0.2749 e124 - 0.0315 e134 + 0.1124 e234
+ + 0.3025 e1234
+</precode>
+</examples>
+<seealso>
+<cliffun name = "conj"/>
+<cliffun name = "clifford_conjugate"/>
+<cliffun name = "reverse"/>
+<cliffun name = "dual"/>
+<cliffun name = "grade_involution"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: grade_four_involution.xml 92 2016-07-28 19:56:45Z sangwine $ -->

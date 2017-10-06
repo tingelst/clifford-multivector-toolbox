@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "e0,e1 etc" overload = "true">
+<short>Clifford basis blades</short>
+<long>
+<para>
+These functions represent the clifford basis blades <code>e0</code>, <code>e1</code>, <code>e2</code>,
+..., <code>e123</code>. They are implemeted as parameter less functions which are initialised by
+<code>clifford_signature</code>. Note that there may be a very large number of these functions if large algebras
+are initialised.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(3,3)
+>> e1234
+ 
+ans =
+ 
+   1.0000 e1234 
+</precode>
+</examples>
+<seealso>
+<cliffun name = "clifford_signature"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: e.xml 132 2017-05-17 16:53:51Z sangwine $ -->

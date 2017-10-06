@@ -1,0 +1,46 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>grade :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>grade</h2>
+<p>Extracts the y-th grade component of a clifford multivector.
+ The result may be empty (example: grade(e1, 2) = []).</p>
+<h2>Description</h2>
+<p>
+<tt>grade(x,y)</tt> returns the elements of multivector <tt>x</tt>,
+ which are part of the grade, <tt>y</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; x = randm
+ 
+x =
+ 
+ - 0.8189 e0
+ + 0.5730 e1 + 0.0000 e2
+ - 0.0340 e12
+ 
+&gt;&gt; grade(x,0)
+ 
+ans =
+ 
+ - 0.8189 e0
+ 
+&gt;&gt; grade(x,1)
+ 
+ans =
+ 
+   0.5730 e1 + 0.0000 e2
+ 
+&gt;&gt; grade(x,2)
+ 
+ans =
+ 
+ - 0.0340 e12
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="bivector.html">bivector</a>, <a href="diag.html">diag</a>, <a href="disp.html">disp</a>, <a href="display.html">display</a>, <a href="even.html">even</a>, <a href="odd.html">odd</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

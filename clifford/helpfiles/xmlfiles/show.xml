@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "show" overload = "false">
+<short>Displays the components of a multivector (array).</short>
+<long>
+<para>
+<code>show(x)</code> dispays the components which make up a multivector array, <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> show(x)
+ 
+x =
+ 
+e0 *
+ 
+    0.0891   -0.0355
+   -0.5628    0.9684
+
++ e1 *
+ 
+    0.0480   -0.3087
+    0.0149   -0.0186
+
++ e2 *
+ 
+    0.1135   -0.1568
+    0.1533   -0.1428
+
++ e12 *
+ 
+    0.9884    0.9375
+   -0.8121    0.2038
+
+>> x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+>> show(x)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "disp"/>
+<cliffun name = "display"/>
+<cliffun name = "dump"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: show.xml 92 2016-07-28 19:56:45Z sangwine $ -->

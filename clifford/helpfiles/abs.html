@@ -1,0 +1,48 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>abs :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>abs</h2>
+<p>Absolute value, or modulus of a multivector.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>abs(x)</tt> returns the absolute value, or modulus of its argument, <tt>x</tt>.
+Applied to a matrix of multivectors it returns matrix of the moduli of all of its entries.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = clifford(1,-2,3,-4)
+ 
+x =
+ 
+   1.0000 e0
+ - 2.0000 e1 + 3.0000 e2
+ - 4.0000 e12
+ 
+&gt;&gt; abs(x)
+
+ans =
+
+    5.4772
+
+&gt;&gt; y = [x,x;x,x]
+ 
+y =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+&gt;&gt; abs(y)
+
+ans =
+
+    5.4772    5.4772
+    5.4772    5.4772
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc abs">abs</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

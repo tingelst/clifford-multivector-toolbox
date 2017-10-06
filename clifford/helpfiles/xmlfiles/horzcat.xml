@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "horzcat" overload = "true">
+<short>Horizontal concatenation.</short>
+<long>
+<para>
+<code>horzcat(x,y)</code> horizontally concatenates two elements,
+<code>x</code> and <code>y</code> into an array. Normally this function is not
+used directly (it implements concatenation with [ and ]).
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(2,2)
+>> show(horzcat(e1,e2))
+ 
+e1 *
+ 
+     1     0
+
++ e2 *
+ 
+     0     1
+
+>> show([e1,e2])
+ 
+e1 *
+ 
+     1     0
+
++ e2 *
+ 
+     0     1
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "horzcat"/>
+<cliffun name = "repmat"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: horzcat.xml 132 2017-05-17 16:53:51Z sangwine $ -->

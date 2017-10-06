@@ -1,0 +1,46 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>length :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>length</h2>
+<p>Length of vector or length of longest array dimension.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>length(x)</tt> returns the value of the length of the argument, <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm
+ 
+x =
+ 
+ - 0.1164 e0
+ - 0.0734 e1 - 0.6395 e2
+ - 0.7563 e12
+ 
+&gt;&gt; length(x)
+
+ans =
+
+     1
+
+&gt;&gt; y = randm(2,3)
+ 
+y =
+ 
+     2x3 Cl(1,1) multivector array
+ 
+&gt;&gt; length(y)
+
+ans =
+
+     3
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc length">length</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

@@ -1,0 +1,40 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>reverse :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>reverse</h2>
+<p>Computes the reverse of a clifford multivector.</p>
+<h2>Description</h2>
+<p>
+<tt>reverse(x)</tt> calculates the reverse of multivector <tt>x</tt>. "To reverse x|| &#8594; &#8722;x||
+x&#8242; = &#8722;x|| + x&#8869; = &#8722;a&#8722;1 a x|| + a&#8722;1 a x&#8869; = &#8722;a&#8722;1 x||a &#8722; a&#8722;1 x&#8869;a = &#8722;a&#8722;1(x|| + x&#8869;)a = &#8722;a&#8722;1 xa"[1]
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+&gt;&gt; reverse(x)
+ 
+ans =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ - 4.0000 e12
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="conj.html">conj</a>, <a href="grade_involution.html">grade_involution</a>, <a href="dual.html">dual</a>, <a href="grade_four_involution.html">grade_four_involution</a>, <a href="clifford_conjugate.html">clifford_conjugate</a><br>
+<h2>References</h2><ol><li>
+<b>Eckhard Hitzer</b>, <i>Introduction to Clifford's Geometric Algebra</i>, 
+Journal of the Society of Instrument and Control Engineers, Vol. 51, No. 4, pp. 338-350, April 2012, (April 2012), 
+page 3, equation 22 <a href="http://arxiv.org/pdf/1306.1660.pdf">http://arxiv.org/pdf/1306.1660.pdf</a>
+</li></ol>
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

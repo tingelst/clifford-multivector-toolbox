@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "reverse" overload = "false">
+<short>Computes the reverse of a clifford multivector.</short>
+<long>
+<para>
+<code>reverse(x)</code> calculates the reverse of multivector <code>x</code>. "To reverse x|| → −x||
+x′ = −x|| + x⊥ = −a−1 a x|| + a−1 a x⊥ = −a−1 x||a − a−1 x⊥a = −a−1(x|| + x⊥)a = −a−1 xa"[1]
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+>> reverse(x)
+ 
+ans =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ - 4.0000 e12
+</precode>
+</examples>
+<seealso>
+<cliffun name = "conj"/>
+<cliffun name = "grade_involution"/>
+<cliffun name = "dual"/>
+<cliffun name = "grade_four_involution"/>
+<cliffun name = "clifford_conjugate"/>
+</seealso>
+<references>
+<reference>
+<bold>Eckhard Hitzer</bold>, <italic>Introduction to Clifford's Geometric Algebra</italic>, 
+Journal of the Society of Instrument and Control Engineers, Vol. 51, No. 4, pp. 338-350, April 2012, (April 2012), 
+page 3, equation 22 <www>http://arxiv.org/pdf/1306.1660.pdf</www>
+</reference>
+</references>
+</function>
+
+<!-- $Id: reverse.xml 92 2016-07-28 19:56:45Z sangwine $ -->

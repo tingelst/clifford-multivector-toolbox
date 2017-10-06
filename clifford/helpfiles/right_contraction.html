@@ -1,0 +1,56 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>right_contraction :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>right_contraction</h2>
+<p>Computes the right contraction of two multivectors.</p>
+<h2>Description</h2>
+<p>
+<tt>right_contraction(x,y)</tt> computes the right contraction of two multivectors <tt>x</tt> and <tt>y</tt>.
+This is a generalisation of the inner product of vectors. "The
+right contraction (symbol &#8970;) is defined as Ak&#8970;Bl = &#8249;AkBl&#8250;(k&#8722;l)"[1]
+,
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(3,0)
+&gt;&gt; x = e1 + e2
+ 
+x =
+ 
+   1.0000 e1  + 1.0000 e2 
+ 
+&gt;&gt; y = e123
+ 
+y =
+ 
+   1.0000 e123
+ 
+&gt;&gt; right_contraction(x,y)
+ 
+ans =
+ 
+   0.0000 e0 
+ 
+&gt;&gt; right_contraction(y,x)
+ 
+ans =
+ 
+ - 1.0000 e13 + 1.0000 e23
+ 
+&gt;&gt; right_contraction(x,x)
+ 
+ans =
+ 
+   2.0000 e0 
+</pre>
+
+<h2>See Also</h2>Clifford function: <a href="left_contraction.html">left_contraction</a><br>
+<h2>References</h2><ol><li>
+<b>Eckhard Hitzer</b>, <i>Introduction to Clifford's Geometric Algebra</i>, 
+Journal of the Society of Instrument and Control Engineers, Vol. 51, No. 4, pp. 338-350, April 2012, (April 2012), 
+page 4, equation 45 <a href="http://arxiv.org/pdf/1306.1660.pdf">http://arxiv.org/pdf/1306.1660.pdf</a>
+</li></ol>
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

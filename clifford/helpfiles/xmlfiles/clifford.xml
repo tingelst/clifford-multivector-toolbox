@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "clifford" overload = "false">
+<short>Construct multivectors from components.</short>
+<long>
+<para>
+<code>clifford(x,y,z,...)</code> is used to construct a multivector from a number of arguments.
+If no argument is supplied an empty multivector is returned. For one argument, if it is a multivector, it is returned unchanged.
+But if the argument is a non multivector it returns the argument in the e0 part. If you provide the right number of arguments 
+for the current Clifford Algebra it will place the arguments into the elements of the multivector. If you provide a string it 
+must be in the form 'e1', 'e123' etc and the result will be a multivector representing a basis element of the current algebra 
+if the string is valid.
+</para>
+</long>
+<examples>
+<precode>
+>> x = clifford()
+ 
+x =
+ 
+     [] Cl(2,2) multivector
+ 
+>> y = clifford(4)
+ 
+y =
+ 
+   4.0000 e0  
+ 
+>> z = clifford(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+ 
+z =
+ 
+   1.0000 e0  
+ + 2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+ + 16.0000 e1234
+ 
+>> str = clifford('e12')
+ 
+str =
+ 
+   1.0000 e12 
+</precode>
+</examples>
+<!--<seealso>
+</seealso>
+<references>
+</references>-->
+</function>
+
+<!-- $Id$ -->

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "part" overload = "false">
+<short>Extracts the n-th component of a clifford multivector.</short>
+<long>
+<para>
+<code>part(x,y)</code> returns the component of <code>x</code> in the position <code>y</code>
+This may be empty if the multivector has an empty component at the nth position. Components are
+numbered from 1 upwards, hence the scalar part has <code>y = 1</code>, the vector part <code>y = 2</code> etc. This function
+permits indexed access to the components.
+</para>
+</long>
+<examples>
+<precode>
+>> x = randm
+ 
+x =
+ 
+ - 0.3019 e0
+ - 0.6125 e1 - 0.4142 e2
+ + 0.6018 e12
+ 
+>> part(x,3)
+
+ans =
+
+   -0.4142
+   
+>> clifford_signature(2,2)
+>> x = clifford(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+ 
+x =
+ 
+   1.0000 e0  
+ + 2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+ + 16.0000 e1234
+ 
+>> part(x,4)
+
+ans =
+
+     4
+
+>> part(x,14)
+
+ans =
+
+    14
+</precode>
+</examples>
+<seealso>
+<cliffun name = "bivector"/>
+<cliffun name = "even"/>
+<cliffun name = "odd"/>
+<cliffun name = "scalar"/>
+<cliffun name = "pseudoscalar"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: part.xml 92 2016-07-28 19:56:45Z sangwine $ -->

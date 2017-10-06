@@ -1,0 +1,41 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>grade_four_involution :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>grade_four_involution</h2>
+<p>Computes the grade 4 involution of a clifford multivector.
+  This function negates the grade four elements of a multivector.</p>
+<h2>Description</h2>
+<p>
+<tt>grade_four_involution(x)</tt> negates the grade four elements of a multivector <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+In this example the pseudoscalar is the only grade 4 element, hence only the pseudoscalar
+element is negated.
+<pre>
+&gt;&gt; x = randm
+ 
+x =
+ 
+ - 0.1564 e0  
+ - 0.0418 e1   + 0.4945 e2   - 0.2878 e3   + 0.2623 e4  
+ + 0.1032 e12  - 0.0782 e13  - 0.3534 e14  - 0.0950 e23  - 0.0290 e24  - 0.4913 e34 
+ + 0.0643 e123 - 0.2749 e124 - 0.0315 e134 + 0.1124 e234
+ - 0.3025 e1234
+ 
+&gt;&gt; grade_four_involution(x)
+ 
+ans =
+ 
+ - 0.1564 e0  
+ - 0.0418 e1   + 0.4945 e2   - 0.2878 e3   + 0.2623 e4  
+ + 0.1032 e12  - 0.0782 e13  - 0.3534 e14  - 0.0950 e23  - 0.0290 e24  - 0.4913 e34 
+ + 0.0643 e123 - 0.2749 e124 - 0.0315 e134 + 0.1124 e234
+ + 0.3025 e1234
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="conj.html">conj</a>, <a href="clifford_conjugate.html">clifford_conjugate</a>, <a href="reverse.html">reverse</a>, <a href="dual.html">dual</a>, <a href="grade_involution.html">grade_involution</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

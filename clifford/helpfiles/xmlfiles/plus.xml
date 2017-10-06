@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "plus" overload = "true">
+<short>+ Plus.</short>
+<long>
+<para>
+<code>plus(x,y)</code> adds element <code>x</code> to element <code>y</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(2,2)
+>> e123 + 3*e4
+ 
+ans =
+ 
+   3.0000 e4  
+ + 1.0000 e123
+ 
+>> x = randm
+ 
+x =
+ 
+ - 0.0854 e0
+ - 0.3905 e1 - 0.2916 e2
+ - 0.8690 e12
+ 
+>> y = randm
+ 
+y =
+ 
+ - 0.4205 e0
+ - 0.6912 e1 - 0.2524 e2
+ - 0.5308 e12
+ 
+>> plus(x,y)
+ 
+ans =
+ 
+ - 0.5059 e0
+ - 1.0817 e1 - 0.5440 e2
+ - 1.3998 e12
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "plus"/>
+<cliffun name = "minus"/>
+<cliffun name = "bsxfun"/>
+<cliffun name = "mtimes"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: plus.xml 132 2017-05-17 16:53:51Z sangwine $ -->

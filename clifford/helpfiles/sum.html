@@ -1,0 +1,49 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>sum :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>sum</h2>
+<p>Sum of elements.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>sum(x)</tt> computes the sum of all elements in object <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+&gt;&gt; y = clifford(4,3,2,1)
+ 
+y =
+ 
+   4.0000 e0
+ + 3.0000 e1 + 2.0000 e2
+ + 1.0000 e12
+ 
+&gt;&gt; z = [x,y]
+ 
+z =
+ 
+     1x2 Cl(1,1) multivector array
+ 
+&gt;&gt; sum(z)
+ 
+ans =
+ 
+   5.0000 e0
+ + 5.0000 e1 + 5.0000 e2
+ + 5.0000 e12
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc sum">sum</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

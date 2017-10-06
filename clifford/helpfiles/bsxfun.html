@@ -1,0 +1,43 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>bsxfun :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>bsxfun</h2>
+<p>Binary Singleton Expansion Function.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>bsxfun(fun,x,y)</tt> Applies an element by element binary operation, denoted by <tt>fun</tt>,
+ on two Clifford objects, <tt>x</tt> and <tt>y</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+x =
+ 
+   0.1389 e0
+ - 0.3224 e1 + 0.5852 e2
+ - 0.7309 e12
+ 
+&gt;&gt; y = randm
+ 
+y =
+ 
+ - 0.1973 e0
+ - 0.4659 e1 + 0.6160 e2
+ + 0.6037 e12
+ 
+&gt;&gt; bsxfun(@plus,x,y)
+ 
+ans =
+ 
+ - 0.0584 e0
+ - 0.7884 e1 + 1.2012 e2
+ - 0.1272 e12
+ </pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc bsxfun">bsxfun</a><br>Clifford functions: <a href="minus.html">minus</a>, <a href="plus.html">plus</a>, <a href="mtimes.html">mtimes</a>, <a href="mdivide.html">mdivide</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

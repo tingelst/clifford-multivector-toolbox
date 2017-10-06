@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "grade_involution" overload = "false">
+<short>Computes the grade involution of a clifford multivector.
+ This function negates the odd grade elements of a multivector.</short>
+<long>
+<para>
+<code>grade_involution(x)</code> negates the elements in the odd grades of the 
+multivector <code>x</code>.
+</para>
+</long>
+<examples>
+In this example the vectors (grade 1) and trivectors (grade 3) are neglected.
+<precode>
+>> clifford_signature(2,2)
+>> x = clifford(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+ 
+x =
+ 
+   1.0000 e0  
+ + 2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+ + 16.0000 e1234
+ 
+>> grade_involution(x)
+ 
+ans =
+ 
+   1.0000 e0  
+ - 2.0000 e1   - 3.0000 e2   - 4.0000 e3   - 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ - 12.0000 e123 - 13.0000 e124 - 14.0000 e134 - 15.0000 e234
+ + 16.0000 e1234
+</precode>
+</examples>
+<seealso>
+<cliffun name = "conj"/>
+<cliffun name = "clifford_conjugate"/>
+<cliffun name = "reverse"/>
+<cliffun name = "dual"/>
+<cliffun name = "grade_four_involution"/>
+<cliffun name = "even"/>
+<cliffun name = "odd"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: grade_involution.xml 92 2016-07-28 19:56:45Z sangwine $ -->

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "scalar_product" overload = "false">
+<short>Multivector scalar product. The two arguments must be the same size or one must be scalar. This is an elementwise operation if applied to arrays.</short>
+<long>
+<para>
+<code>scalar_product(x,y)</code> computes the scalar product of two elements <code>x</code> and <code>y</code>. 
+This is a generalisation of the inner product of vectors. "The symmetric scalar part of the geometric product of two multivectors
+M, N ∈ Cl(2, 0) is also called their scalar product and because of its fundamental importance denoted with a special product sign ∗
+M ∗ N = ‹MN›0 = m0n0 + m1n1 + m2n2 − m12n12 = N ∗ M"[1]
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+>> y = randm
+ 
+y =
+ 
+ - 0.9401 e0
+ - 0.2775 e1 - 0.0973 e2
+ + 0.1723 e12
+ 
+>> scalar_product(x,x)
+
+ans =
+
+   -20
+
+>> scalar_product(x,y)
+
+ans =
+
+   -1.8924
+</precode>
+</examples>
+<seealso>
+<cliffun name = "left_contraction"/>
+<cliffun name = "right_contraction"/>
+</seealso>
+<references>
+<reference>
+<bold>Eckhard Hitzer</bold>, <italic>Introduction to Clifford's Geometric Algebra</italic>, 
+Journal of the Society of Instrument and Control Engineers, Vol. 51, No. 4, pp. 338-350, April 2012, (April 2012), 
+page 4, equation 38 <www>http://arxiv.org/pdf/1306.1660.pdf</www>
+</reference>
+</references>
+</function>
+
+<!-- $Id: scalar_product.xml 92 2016-07-28 19:56:45Z sangwine $ -->

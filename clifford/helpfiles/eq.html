@@ -1,0 +1,69 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>eq :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>eq</h2>
+<p>==  Equal.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>eq(x,y)</tt> returns a logical true or false value based on whether
+the input values <tt>x</tt> and <tt>y</tt> are equal. It can also be
+used to determine equality of array values.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; x = randm
+ 
+x =
+ 
+ - 0.7303 e0
+ + 0.6393 e1 + 0.2399 e2
+ - 0.0199 e12
+ 
+&gt;&gt; y = randm
+ 
+y =
+ 
+   0.0811 e0
+ - 0.6956 e1 - 0.0376 e2
+ + 0.7129 e12
+ 
+&gt;&gt; eq(x,x)
+
+ans =
+
+     1
+
+&gt;&gt; eq(x,y)
+
+ans =
+
+     0
+</pre>
+Array equality:
+<pre>
+&gt;&gt; a  = [x,y,x,y]
+ 
+a =
+ 
+     1x4 Cl(1,1) multivector array
+	 
+&gt;&gt; z = [x,y,y,x]
+ 
+z =
+ 
+     1x4 Cl(1,1) multivector array
+	 
+&gt;&gt; eq(a,z)
+
+ans =
+
+     1     1     0     0
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc eq">eq</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

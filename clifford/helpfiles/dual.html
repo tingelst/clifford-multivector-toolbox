@@ -1,0 +1,37 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>dual :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>dual</h2>
+<p>Computes the dual of a multivector.</p>
+<h2>Description</h2>
+<p>
+<tt>dual(x)</tt> computes the dual of a multivector, <tt>x</tt>, by division with the unit pseudoscalar.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(3,0)
+&gt;&gt; x = randm
+ 
+x =
+ 
+ - 0.0276 e0 
+ - 0.6458 e1  - 0.1467 e2  - 0.5996 e3 
+ + 0.2808 e12 - 0.2967 e13 + 0.0334 e23
+ - 0.1819 e123
+ 
+&gt;&gt; dual(x)
+ 
+ans =
+ 
+ - 0.1819 e0 
+ + 0.0334 e1  + 0.2967 e2  + 0.2808 e3 
+ + 0.5996 e12 - 0.1467 e13 + 0.6458 e23
+ + 0.0276 e123
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="conj.html">conj</a>, <a href="reverse.html">reverse</a>, <a href="grade_involution.html">grade_involution</a>, <a href="clifford_conjugate.html">clifford_conjugate</a>, <a href="grade_four_involution.html">grade_four_involution</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

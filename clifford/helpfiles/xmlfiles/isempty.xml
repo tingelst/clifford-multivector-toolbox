@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "isempty" overload = "true">
+<short>True for empty matrix.</short>
+<long>
+<para>
+<code>isempty(x)</code> returns logical true or false depending on whether the
+ argument <code>x</code> is empty.
+</para>
+</long>
+<examples>
+Non-empty array:
+<precode>
+>> x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> isempty(x)
+
+ans =
+
+     0
+</precode>
+Empty array:
+<precode>
+>> x = clifford.empty
+ 
+x =
+ 
+     [] Cl(1,1) multivector
+ 
+>> isempty(x)
+
+ans =
+
+     1
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "isempty"/>
+<cliffun name = "empty"/>
+<cliffun name = "numel"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: isempty.xml 132 2017-05-17 16:53:51Z sangwine $ -->

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "conj" overload = "true">
+<short>Computes the conjugate of a multivector.</short>
+<long>
+<para>
+<code>conj(x)</code> computes the Clifford conjugate of a multivector, <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(3,1)
+>> x = randm
+ 
+x =
+ 
+   0.3035 e0  
+ + 0.3080 e1   - 0.2398 e2   + 0.0215 e3   - 0.3371 e4  
+ - 0.3091 e12  - 0.0019 e13  + 0.4255 e14  - 0.2137 e23  + 0.1031 e24  - 0.0626 e34 
+ + 0.3102 e123 - 0.3024 e124 + 0.0090 e134 + 0.1534 e234
+ + 0.3056 e1234
+ 
+>> conj(x)
+ 
+ans =
+ 
+   0.3035 e0  
+ - 0.3080 e1   + 0.2398 e2   - 0.0215 e3   + 0.3371 e4  
+ + 0.3091 e12  + 0.0019 e13  - 0.4255 e14  + 0.2137 e23  - 0.1031 e24  + 0.0626 e34 
+ + 0.3102 e123 - 0.3024 e124 + 0.0090 e134 + 0.1534 e234
+ + 0.3056 e1234
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "conj"/>
+<cliffun name = "clifford_conjugate"/>
+<cliffun name = "reverse"/>
+<cliffun name = "grade_involution"/>
+<cliffun name = "dual"/>
+<cliffun name = "grade_four_involution"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: conj.xml 132 2017-05-17 16:53:51Z sangwine $ -->

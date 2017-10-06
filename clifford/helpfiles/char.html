@@ -1,0 +1,46 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>char :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>char</h2>
+<p>Create character array (string).<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>char(x)</tt> creates a text character string representing the input Clifford object, <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm
+ 
+x =
+ 
+   0.6133 e0
+ + 0.6223 e1 - 0.4845 e2
+ + 0.0434 e12
+ 
+&gt;&gt; class(x)
+
+ans =
+
+clifford
+
+&gt;&gt; x = char(x)
+
+x =
+
+   0.6133 e0 + 0.6223 e1 - 0.4845 e2 + 0.0434 e12
+
+&gt;&gt; class(x)
+
+ans =
+
+char
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; functions: <a href="matlab:doc char">char</a>, <a href="matlab:doc class">class</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

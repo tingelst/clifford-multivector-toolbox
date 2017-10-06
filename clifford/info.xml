@@ -1,0 +1,14 @@
+<productinfo
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="optional">
+<?xml-stylesheet type="text/xsl" href="optional"?>
+
+<matlabrelease>14</matlabrelease>
+<name>Clifford Multivector</name>
+<type>toolbox</type>
+<icon></icon>
+<help_location>helpfiles</help_location>
+
+</productinfo>
+
+<!--$Id: info.xml 101 2016-08-23 16:03:23Z sangwine $-->

@@ -1,0 +1,73 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>inv :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>inv</h2>
+<p>Inverse of a multivector (matrix).<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>inv(x)</tt> computes the inverse of any invertable argument multivector <tt>x</tt>,
+including that of matricies of multivectors.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+&gt;&gt; show(x*inv(x))
+ 
+e0 *
+ 
+    1.0000   -0.0000
+   -0.0000    1.0000
+
++ e1 *
+ 
+   1.0e-14 *
+
+   -0.0222   -0.0222
+    0.6078   -0.0250
+
++ e2 *
+ 
+   1.0e-14 *
+
+   -0.0333    0.0833
+    0.2220    0.0777
+
++ e12 *
+ 
+   1.0e-14 *
+
+   -0.0111    0.0722
+    0.3608    0.0222
+</pre>
+If x is not invertable (i.e. is a divisor of zero) the result will contain
+NaNs or infinities.
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = e1 - e2
+ 
+x =
+ 
+   1.0000 e1 - 1.0000 e2
+ 
+&gt;&gt; inv(x)
+ 
+ans =
+ 
+   NaN e0
+ - Inf e1 + Inf e2
+ + NaN e12
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc inv">inv</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

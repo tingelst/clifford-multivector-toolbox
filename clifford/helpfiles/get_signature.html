@@ -1,0 +1,50 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>get_signature :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>get_signature</h2>
+<p>Returns the signature of a multivector.</p>
+<h2>Description</h2>
+<p>
+<tt>get_signature(x)</tt> returns the Clifford signature of the multivector argument <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; x = randm
+ 
+x =
+ 
+   0.3540 e0
+ + 0.6497 e1 - 0.5681 e2
+ - 0.3603 e12
+ 
+&gt;&gt; get_signature(x)
+
+ans =
+
+      1      1      0
+
+&gt;&gt; clifford_signature(2,2)
+&gt;&gt; y = randm
+ 
+y =
+ 
+   0.4060 e0  
+ - 0.4531 e1   + 0.4473 e2   + 0.0677 e3   + 0.2006 e4  
+ - 0.3339 e12  - 0.1184 e13  - 0.0558 e14  + 0.0848 e23  - 0.3351 e24  + 0.0946 e34 
+ - 0.2433 e123 + 0.0133 e124 + 0.1309 e134 + 0.0656 e234
+ + 0.2172 e1234
+ 
+&gt;&gt; get_signature(y)
+
+ans =
+
+      2      2      0
+
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="dump.html">dump</a>, <a href="clifford_signature.html">clifford_signature</a>, <a href="check_signature.html">check_signature</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

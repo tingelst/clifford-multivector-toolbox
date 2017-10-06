@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "clifford_conjugate" overload = "false">
+<short>Computes the Clifford conjugate of a multivector.</short>
+<long>
+<para>
+<code>clifford_conjugate(x)</code> computes the Clifford conjugate of a multivector 
+which reverses the sign of the blades of grades 1 mod 4 and 2 mod 4,
+while maintaining the signs of all othe blade components.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(2,1)
+>> x = randm
+ 
+x =
+ 
+ - 0.0852 e0 
+ - 0.2013 e1  + 0.2661 e2  + 0.2608 e3 
+ - 0.7211 e12 - 0.0251 e13 - 0.1375 e23
+ + 0.5233 e123
+ 
+>> clifford_conjugate(x)
+ 
+ans =
+ 
+ - 0.0852 e0 
+ + 0.2013 e1  - 0.2661 e2  - 0.2608 e3 
+ + 0.7211 e12 + 0.0251 e13 + 0.1375 e23
+ + 0.5233 e123
+</precode>
+</examples>
+<seealso>
+<cliffun name = "conj"/>
+<cliffun name = "reverse"/>
+<cliffun name = "grade_involution"/>
+<cliffun name = "dual"/>
+<cliffun name = "grade_four_involution"/>
+</seealso>
+<references>
+<reference>
+See <bold>P.Lounesto</bold>, <italic>Clifford Algebras and Spinors</italic>, 2nd ed. CUP, 2001.
+</reference>
+</references>
+</function>
+
+<!-- $Id: clifford_conjugate.xml 92 2016-07-28 19:56:45Z sangwine $ -->

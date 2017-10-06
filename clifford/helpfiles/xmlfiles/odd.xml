@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "odd" overload = "false">
+<short>Extracts the sum of the odd grades of a clifford multivector.</short>
+<long>
+<para>
+<code>odd(x)</code> extracts the sum of all of the odd grades of a Clifford multivector <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> x = randm
+ 
+x =
+ 
+   0.1646 e0
+ + 0.8601 e1 - 0.1400 e2
+ - 0.4621 e12
+ 
+>> odd(x)
+ 
+ans =
+ 
+   0.8601 e1 - 0.1400 e2
+   
+>> clifford_signature(2,2)
+>> x = clifford(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+ 
+x =
+ 
+   1.0000 e0  
+ + 2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+ + 16.0000 e1234
+ 
+>> odd(x)
+ 
+ans =
+ 
+   2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+</precode>
+</examples>
+<seealso>
+<cliffun name = "even"/>
+<cliffun name = "bivector"/>
+<cliffun name = "part"/>
+<cliffun name = "scalar"/>
+<cliffun name = "pseudoscalar"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: odd.xml 92 2016-07-28 19:56:45Z sangwine $ -->

@@ -1,0 +1,36 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>uplus :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>uplus</h2>
+<p>+  Unary plus.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>uplus(x)</tt> is an alternative for using the statement <tt>+x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = clifford(-1,2,-3,4)
+ 
+x =
+ 
+ - 1.0000 e0
+ + 2.0000 e1 - 3.0000 e2
+ + 4.0000 e12
+ 
+&gt;&gt; uplus(x)
+ 
+ans =
+ 
+ - 1.0000 e0
+ + 2.0000 e1 - 3.0000 e2
+ + 4.0000 e12
+</pre>
+
+<h2>See Also</h2>Clifford function: <a href="uminus.html">uminus</a><br>MATLAB&reg; function: <a href="matlab:doc uplus">uplus</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

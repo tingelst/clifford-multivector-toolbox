@@ -1,0 +1,143 @@
+ Clifford Multivector Toolbox for Matlab - Implementation Notes
+--------------------------------------------------------------
+
+This file sets out some notes on the internal implementation of the toolbox
+particularly implementation limitations. These notes are partly explanatory
+and partly to document issues that may be taken into account in development
+of the toolbox in future, for example to remove or reduce the impact of an
+implementation restriction.
+
+Multivector storage
+-------------------
+
+Consider an algebra with n basis vectors and m = 2^n basis blades e1, e12
+and so on, up to the pseudoscalar e1234...
+
+Within a multivector array, there is a cell array of basis blades
+representing coefficients of e0, e1, e2, etc. These coefficients are stored
+in lexical order by grade. The sequence is e0, vectors, bivectors,
+trivectors, and so on, with lexical ordering used within each grade. This
+is also the order in which the toolbox displays the components of a
+multivector in the command window. Sometimes it is necessary to access the
+components using binary ordering in which each basis vector is represented
+by one bit within an n-bit binary number. And of course, it is sometimes
+necessary to map between these orderings/indices. A function is provided to
+construct the mapping. It is called clifford_lexical_index_mapping.
+
+Implementation restrictions
+---------------------------
+
+As far as possible, we have designed the toolbox internal implementation so
+that there are no restrictions other than available memory that will limit
+the maximum dimension of algebra that can be initialized. When an algebra
+is initialized with the function clifford_signature(p, q, r), an internal
+descriptor is created. This is a global variable which is not by default
+visible in the user's workspace, although it can be made visible by typing
+the command 'global clifford_descriptor', or displayed in the command
+window by the command 'descriptor'. Two key integer fields within the
+descriptor determine the size of algebra: n is the number of basis vectors
+e1, e2, e3, ..., en; and m is the total number of numeric components in a
+multivector array. m is equal to 2^n.
+
+In order to initialise an algebra, the clifford_signature function has to
+compute the multiplication table of the algebra. This is stored in two
+tables, one for the sign, and one for the index. When two basis elements
+are multiplied (e.g. e1 times e23) the product has a sign which depends on
+the algebra, and the result must be stored in the appropriate element of
+the multivector result - independent of the algebra (in the example e123).
+The sign is computed by the function clifford_sign_table, which returns a
+two-dimensional array of int8 values, and the size of this array is m^2
+bytes. The index table is also m-by-m, but it must contain larger integers,
+to permit the initialisation of algebras with more than 256 elements in
+each multivector. The next available Matlab integer type has 16 bits, and
+thus the size of the index array is 2 m^2 bytes. The 16-bit index type
+"limits" the size of algebra to 65536 elements in each multivector. In
+practice, this limit could not be reached because of limitations on memory
+and the time to compute the multiplication table.
+
+So, the memory usage of the sign and index arrays is 3 m^2 bytes. An algebra
+with n=10 (and therefore m=1024) requires 3M bytes of memory to store the
+sign and index arrays. Adding one to n doubles the value of m, and therefore
+quadruples the size of the sign and index arrays. With n=16, m=65536, and
+3 m^2 = 12G bytes which is probably more than could be supported on most
+personal computers in 2015.
+
+A second issue regarding size of algebra is the existence of parameterless
+functions for the basis elements of the algebra. However, even with n=16 and
+m=65536, it is not impossible to create this number of small function files
+on disk. Each file is less than 500 bytes in size, so only 32K bytes of disk
+would be needed to store them all. If your disk uses 4K blocks, the space
+required will be around 70Mbytes, which is not a problem with modern disk
+sizes.
+
+Multivectors are represented internally using cell arrays, one array for
+each numeric component. Some of these arrays may be empty, representing
+components with an exact zero value (or array of exact zeros to be precise).
+The function dump(a) will display the content of a multivector for debugging
+purposes. Each multivector contains a copy of the signature that was in use
+when the multivector was created.
+
+The global variable clifford_descriptor contains the initialised parameters
+of the algebra. This variable is normally loaded from a cached copy (see
+below) and therefore computed from scratch only when an algebra is
+initialised for the first time by a given version of the toolbox.
+
+
+Single algebra paradigm
+-----------------------
+
+The current design of the toolbox assumes that one algebra is in use at any
+time. However, each multivector that is created contains a copy of the
+signature in use at the time it was created. This means that you can change
+the current algebra, leaving multivectors in memory, and return later to an
+algebra that you used previously by (re)initialising that algebra, and then
+use the multivectors previously created.
+
+This is not the only way the toolbox could work. Multiple algebras could
+exist at once - each would have a descriptor and each multivector could
+have a link (explicit or implicit) to its corresponding descriptor. Only
+certain operations depend on the algebra in use - multiplication certainly,
+and any operation that requires multiplication or inverses. However, some
+operations can be done without recourse to the algebra. Examples are size,
+plus, which can be implemented on a multivector even if the multivector was
+created under a different algebra. Obviously some operations that take two
+arguments require that these arguments are in the same algebra, and this
+would have to be enforced.
+
+Descriptor cacheing
+-------------------
+
+Initialisation of an algebra requires significant computation. From version
+1.0 of the toolbox, the descriptors are written to file in a directory
+called cache, and the function clifford_signature will load the descriptor
+from this cache if it is available. The files in the cache are standard
+Matlab MAT files. There are two possible issues with this implementation:
+
+1. The format of the descriptor may change in a later release of the
+   toolbox, which could lead to incompatibility with cached descriptors.
+
+2. The format of the MAT file may change in a later release of MATLAB.
+
+Both of these issues can be simply handled by deleting the cache directory,
+which will cause the clifford_signature function to re-create the cache as
+it initialises new algebras. However, to reduce the need to do this in case
+1, the toolbox writes the files to a hierarchy of sub-directories using the
+major and minor version numbers of the toolbox to name the sub-directories.
+This ensures that each version of the toolbox writes its cached files to
+different sub-directories, so no conflict can occur if the descriptor
+format is changed. Of course, the downside to this is that each new release
+of the toolbox has to re-create all the descriptors as it initialises each
+algebra. Running the test code will initialise many commonly used algebras,
+so this is a simple way to rebuild an initial cache. If you know how to
+rename directories, it is of course possible to re-use existing cached
+descriptors simply by renaming the directory containing them to match the
+toolbox version number PROVIDED we have not made a change to the descriptor
+format (check the release notes).
+
+Steve Sangwine
+Eckhard Hitzer
+August 2015
+Updated June/July 2016
+Update April 2017
+
+$Id: implementation_notes.txt 111 2017-04-05 09:32:16Z sangwine $

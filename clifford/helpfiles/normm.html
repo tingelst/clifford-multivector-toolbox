@@ -1,0 +1,38 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>normm :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>normm</h2>
+<p>Norm of a multivector (norm of each element for arrays)</p>
+<h2>Description</h2>
+<p>
+<tt>norm(x)</tt> computes the norm of a multivector or multivector array. "We get the norm |M| of a multivector as
+|M|2 = M * M&#773; = &#8249;MM&#773;&#8250;0 = m2 0 + m2 1 + m2 2 + m2 12."[1]
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = 1*e0 - 2*e1 + 3*e2 - 4*e12
+ 
+x =
+ 
+   1.0000 e0
+ - 2.0000 e1 + 3.0000 e2
+ - 4.0000 e12
+ 
+&gt;&gt; normm(x)
+
+ans =
+
+    30
+</pre>
+
+<h2>See Also</h2>Clifford function: <a href="abs.html">abs</a><br>
+<h2>References</h2><ol><li>
+<b>Eckhard Hitzer</b>, <i>Introduction to Clifford's Geometric Algebra</i>, 
+Journal of the Society of Instrument and Control Engineers, Vol. 51, No. 4, pp. 338-350, April 2012, (April 2012), 
+page 4, equation 40 <a href="http://arxiv.org/pdf/1306.1660.pdf">http://arxiv.org/pdf/1306.1660.pdf</a>
+</li></ol>
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

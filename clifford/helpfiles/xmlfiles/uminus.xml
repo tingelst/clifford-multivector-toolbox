@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "uminus" overload = "true">
+<short>-  Unary minus.</short>
+<long>
+<para>
+<code>uminus(x)</code> reverses the signs of the input argument, <code>x</code> and is an alternative of doing <code>-x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm
+ 
+x =
+ 
+   0.6375 e0
+ + 0.4934 e1 - 0.2405 e2
+ + 0.5407 e12
+ 
+>> uminus(x)
+ 
+ans =
+ 
+ - 0.6375 e0
+ - 0.4934 e1 + 0.2405 e2
+ - 0.5407 e12
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "uminus"/>
+<cliffun name = "uplus"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: uminus.xml 132 2017-05-17 16:53:51Z sangwine $ -->

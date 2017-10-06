@@ -1,0 +1,35 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>pseudoscalar :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>pseudoscalar</h2>
+<p>Extracts the pseudoscalar component (the highest grade part) of a clifford multivector. The result is a multivector.</p>
+<h2>Description</h2>
+<p>
+<tt>pseudoscalar(x)</tt> is used to extract the pseudoscalar element from a multivector <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(2,2)
+&gt;&gt; x = clifford(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+ 
+x =
+ 
+   1.0000 e0  
+ + 2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+ + 16.0000 e1234
+ 
+&gt;&gt; pseudoscalar(x)
+ 
+ans =
+ 
+   16.0000 e1234
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="bivector.html">bivector</a>, <a href="even.html">even</a>, <a href="odd.html">odd</a>, <a href="part.html">part</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

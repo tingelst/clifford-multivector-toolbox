@@ -1,0 +1,150 @@
+--------------------------------------------------------------
+           Clifford Multivector Toolbox for Matlab
+     http://clifford-multivector-toolbox.sourceforge.net/
+--------------------------------------------------------------
+Copyright (c) 2013-2017 Stephen J. Sangwine & Eckhard Hitzer
+Email: sangwine@users.sourceforge.net, hitzer@icu.ac.jp
+--------------------------------------------------------------
+
+                     Release Notes
+
+Version 1.2  10 May 2017
+
+The subsasgn function has been corrected to deal with cases like assignment
+of empty to a row or column of a multivector array, and cases where parts
+some components of the assignment source or destination were empty.
+Thanks to Radek Tichy for pointing out cases where this function failed.
+
+Test code has been added for Matlab functions known to work with multivector
+inputs. This code is mostly copied from the Quaternion Toolbox for Matlab.
+While debugging it, a change was made to the .* and + functions to permit
+singleton expansion by removing a check on the sizes of the parameters. This 
+step follows similar changes made in QTFM to support the new functionality
+of Matlab since release R2016b. Further work may be needed to permit
+implicit singleton expansion in other functions. The list of Matlab functions
+which work with multivectors has been corrected.
+
+The mean function has been added to the toolbox (in order to support the
+tests above on the std and var functions). 
+
+Version 1.1  21 December 2016
+
+The code for the wedge function has been corrected when intermediate
+results gave empty arrays. The correction means that wedge(e1, e2) now
+gives e12 as expected and not an empty array as it did in prior versions.
+Test code for the wedge function has also been added.
+
+Version 1.0  23 August 2016
+
+This release of the toolbox now includes documentation in the form of help
+files which are viewable in the Matlab online documentation browser. The
+documentation was created by Ryan Stuart working on a Frontrunner student
+placement funded by the University of Essex.
+
+The clifford_signature function now stores descriptors for each algebra
+that it initialises in a hierarchy of directories, with a directory named
+'cache' as the top-level directory. The implementation of this cache is
+described in the file 'implementation_notes.txt'. This cache speeds up the
+process of initialising an algebra or switching between algebras.
+
+With this release we make available functions to compute the inverses of
+multivectors and matrices of multivectors using the power and inv functions
+and the inline notations x .^ -1 and A ^ -1. This new functionality is the
+subject of a journal paper under review at the time of release, but made
+available as a preprint.
+
+The LU decomposition of a matrix of multivectors is implemented, making use
+of the new functionality to compute multivector inverses.
+
+Other new functions implemented are overloadings of Matlab functions:
+mrdivide (for scalars on the right only), ctranspose.
+
+Version 0.9  28 January 2016
+
+The Matlab function bsxfun has been overloaded for multivectors, making it
+possible for some Matlab functions such as std, cov, var, kron to work with
+multivector arrays. The functions reshape, squeeze and numel have also been
+overloaded. All of these were copied from the Quaternion Toolbox for Matlab
+(QTFM).
+
+The show command now produces slightly better output with a clearer
+mathematical interpretation. Each numeric array is shown as multiplied by
+e0, e1, etc. and summed together to make the full multivector. The previous
+output had = signs which were mathematically meaningless.
+
+Version 0.8
+
+The following new functions have been added (these are overloadings of
+Matlab functions): cast, sum, mpower (matrix power).
+
+Some work has been done to clarify the limits to the size of Clifford
+algebra that can be initialised and a restraint removed that was due to an
+explicit representation of the multiplication tensor. The implementation
+limits are discussed in a new file: implementation_notes.txt. Broadly our
+aim is to ensure that the only limit to algebra size is memory and time and
+not a data type limit within the toolbox.
+
+The left and right contraction functions have been corrected.
+
+A new function clifford_csv_export makes it possible to save the current
+multiplication table to a comma-separated values file. This is intended for
+checking the tables against other software libraries.
+
+The randm function has been significantly speeded up. It was previously
+very slow for large algebras due to the poor algorithm used.
+
+A new private function overloade has been provided to handle implementation
+of overloaded functions where it makes sense to apply the overloaded
+operation to empty components of multivectors. Before this release, some
+functions would raise an error in this case (transpose is an example).
+
+Version 0.7
+
+The clifford_signature function now checks for existing files e0.m, e1.m
+etc, and, if they exist AND their content is correct, it does not overwrite
+them. This avoids pointless timestamp updates on a large number of files,
+but at the same time, ensures that any change made to the contents inserted
+into these files by a future release will automatically update any existing
+files when the appropriate algebra is initialised.
+
+The installation instructions in Read_me.txt have been updated to specify
+not to use the MATLAB toolbox folder for installation (point 1 in the file).
+The test code has also been updated to check that the clifford folder is
+not located inside the MATLAB installation hierarchy.
+
+The clifford_signature function no longer outputs diagnostic information
+when initialising an algebra (this makes the test code run with less output).
+The test code now lists each algebra before it is tested instead. As before
+clifford_signature with no parameters outputs the diagnostic information.
+
+Version 0.6
+
+The file gpl.txt has been added, omitted from the first release.
+
+The eq function has been fixed to return an array rather than a scalar when
+given arrays to compare.
+
+The code has been speeded up compared to release 0.5 by profiling the test
+code and making changes to reduce unnecessary computation and function
+calls.
+
+A bug in the output of the multiplication table which is displayed when the
+signature is initialised has been fixed, and the table is now created from
+the same data that is used to compute multivector multiplications.
+
+Version 0.5
+
+This is the first public release of the toolbox.  At present, functionality
+is limited and there is no documentation provided. We expect to change this
+during 2015 with subsequent releases. Completion of this initial public
+release was made possible by a grant from the London Mathematical Society
+(Research in Pairs Scheme) which funded a visit by Steve Sangwine to ICU in
+Tokyo during March 2015. During the two weeks of the visit, test code was
+written to confirm the multiplication tables are correctly computed for all
+algebras tested. This test code is provided as part of this release. Some
+effort was also expended to speed up the toolbox so that the initial
+release can run the test code in reasonable time. Other work done during
+the visit will be subject to embargo until publication, and will be
+included in a subsequent release.
+
+$Id: Release_notes.txt 127 2017-05-10 13:40:25Z sangwine $

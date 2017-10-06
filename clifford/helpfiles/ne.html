@@ -1,0 +1,48 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>ne :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>ne</h2>
+<p>~= Not equal.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>ne(x,y)</tt> computes whether the arguments <tt>x</tt> and 
+<tt>y</tt> are unequal and returns true if they are.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; x = randm
+ 
+x =
+ 
+   0.7548 e0
+ + 0.1521 e1 + 0.6229 e2
+ + 0.1381 e12
+ 
+&gt;&gt; y = randm
+ 
+y =
+ 
+ - 0.6291 e0
+ + 0.5436 e1 + 0.0549 e2
+ - 0.5529 e12
+ 
+&gt;&gt; ne(x,x)
+
+ans =
+
+     0
+
+&gt;&gt; ne(x,y)
+
+ans =
+
+     1
+</pre>
+
+<h2>See Also</h2>Clifford function: <a href="eq.html">eq</a><br>MATLAB&reg; function: <a href="matlab:doc ne">ne</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

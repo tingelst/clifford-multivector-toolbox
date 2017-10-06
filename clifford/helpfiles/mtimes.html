@@ -1,0 +1,87 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>mtimes :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>mtimes</h2>
+<p>* Matrix multiply.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>mtimes(x,y)</tt> multiplies matrix <tt>x</tt> by matrix <tt>y</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+&gt;&gt; show(x)
+ 
+x =
+ 
+e0 *
+ 
+    0.3431    0.0616
+    0.3436    0.2573
+
++ e1 *
+ 
+    0.8827   -0.3682
+    0.8321    0.4196
+
++ e2 *
+ 
+    0.1413   -0.7727
+   -0.4335    0.3352
+
++ e12 *
+ 
+   -0.2884   -0.5134
+    0.0398   -0.8033
+
+&gt;&gt; y = [3,0;0,3]
+
+y =
+
+     3     0
+     0     3
+
+&gt;&gt; mtimes(x,y)
+ 
+ans =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+&gt;&gt; show(ans)
+ 
+ans =
+ 
+e0 *
+ 
+    1.0293    0.1848
+    1.0309    0.7720
+
++ e1 *
+ 
+    2.6480   -1.1045
+    2.4964    1.2589
+
++ e2 *
+ 
+    0.4239   -2.3180
+   -1.3005    1.0056
+
++ e12 *
+ 
+   -0.8652   -1.5403
+    0.1194   -2.4100
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc mtimes">mtimes</a><br>Clifford functions: <a href="bsxfun.html">bsxfun</a>, <a href="rdivide.html">rdivide</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

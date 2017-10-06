@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "numel" overload = "true">
+<short>Number of elements in an array or subscripted array expression.</short>
+<long>
+<para>
+<code>numel(x)</code> returns the number of elements in an array <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> numel(x)
+
+ans =
+
+     4
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "numel"/>
+<cliffun name = "ndims"/>
+<cliffun name = "length"/>
+<cliffun name = "horzcat"/>
+<cliffun name = "empty"/>
+<cliffun name = "dump"/>
+<cliffun name = "isempty"/>
+<cliffun name = "size"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: numel.xml 132 2017-05-17 16:53:51Z sangwine $ -->

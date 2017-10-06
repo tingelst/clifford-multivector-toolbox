@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "squeeze" overload = "true">
+<short>Remove singleton dimensions.</short>
+<long>
+<para>
+<code>squeeze(x)</code> removes all singleton dimensions from array <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm(4,1,2)
+ 
+x =
+ 
+     4x1x2 Cl(1,1) multivector array
+ 
+>> squeeze(x)
+ 
+ans =
+ 
+     4x2 Cl(1,1) multivector array
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "squeeze"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: squeeze.xml 132 2017-05-17 16:53:51Z sangwine $ -->

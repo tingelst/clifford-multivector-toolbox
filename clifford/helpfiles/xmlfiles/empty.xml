@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "empty" overload = "true">
+<short>This function makes it possible to use the dotted notation 
+clifford.empty to create an empty array.</short>
+<long>
+<para>
+<code>clifford.empty</code> creates an empty multivector array.
+</para>
+</long>
+<examples>
+<precode>
+>> x = clifford.empty
+ 
+x =
+ 
+     [] Cl(1,1) multivector
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "empty"/>
+<cliffun name = "isempty"/>
+<cliffun name = "length"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: empty.xml 132 2017-05-17 16:53:51Z sangwine $ -->

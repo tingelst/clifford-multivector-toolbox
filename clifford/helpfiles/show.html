@@ -1,0 +1,65 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>show :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>show</h2>
+<p>Displays the components of a multivector (array).</p>
+<h2>Description</h2>
+<p>
+<tt>show(x)</tt> dispays the components which make up a multivector array, <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+&gt;&gt; show(x)
+ 
+x =
+ 
+e0 *
+ 
+    0.0891   -0.0355
+   -0.5628    0.9684
+
++ e1 *
+ 
+    0.0480   -0.3087
+    0.0149   -0.0186
+
++ e2 *
+ 
+    0.1135   -0.1568
+    0.1533   -0.1428
+
++ e12 *
+ 
+    0.9884    0.9375
+   -0.8121    0.2038
+
+&gt;&gt; x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+&gt;&gt; show(x)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc disp">disp</a><br>Clifford functions: <a href="display.html">display</a>, <a href="dump.html">dump</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

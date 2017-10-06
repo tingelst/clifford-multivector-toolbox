@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "dump" overload = "false">
+<short>Outputs a human readable dump of the contents of the
+  multivector (for debugging purposes).</short>
+<long>
+<para>
+<code>dump(x)</code> outputs the current signature of the argument, <code>x</code>,
+and also the multivector components, which can be used for debugging. The sizes of the components are shown.
+</para>
+</long>
+<examples>
+<precode>
+>> x = randm
+ 
+x =
+ 
+   0.0038 e0
+ - 0.9163 e1 - 0.1382 e2
+ + 0.3758 e12
+ 
+>> dump(x)
+Signature: 1  1  0
+ 
+Multivector components:
+1: [1  1]  double
+2: [1  1]  double
+3: [1  1]  double
+4: [1  1]  double
+</precode>
+</examples>
+<seealso>
+<cliffun name = "get_signature"/>
+<cliffun name = "length"/>
+<cliffun name = "isempty"/>
+<cliffun name = "show"/>
+<cliffun name = "disp"/>
+<cliffun name = "display"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: dump.xml 92 2016-07-28 19:56:45Z sangwine $ -->

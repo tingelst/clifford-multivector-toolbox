@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "power" overload = "true">
+<short>.^   Array power.</short>
+<long>
+<para>
+<code>power(x,y)</code> raises element <code>x</code> to power <code>y</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+>> power(x,2)
+ 
+ans =
+ 
+   12.0000 e0
+ + 4.0000 e1 + 6.0000 e2
+ + 8.0000 e12
+ 
+>> x = randm
+ 
+x =
+ 
+   0.1554 e0
+ - 0.4396 e1 + 0.5084 e2
+ - 0.7239 e12
+ 
+>> power(x,2)
+ 
+ans =
+ 
+   0.4830 e0
+ - 0.1366 e1 + 0.1580 e2
+ - 0.2249 e12
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "power"/>
+<cliffun name = "mpower"/>
+<cliffun name = "inv"/>
+</seealso>
+<references>
+<reference>
+Hitzer, E. and Sangwine, S. J.,
+'Multivector and multivector matrix inverses in real Clifford algebras',
+<italic>Applied Mathematics and Computation</italic>, in press, accepted 2 May 2017.
+A preprint version is available as:
+Technical Report CES-534, School of Computer Science and Electronic Engineering,
+University of Essex, 21 July 2016, available at: <www>http://repository.essex.ac.uk/17282/</www>.
+</reference>
+</references>
+</function>
+
+<!-- $Id: power.xml 132 2017-05-17 16:53:51Z sangwine $ -->

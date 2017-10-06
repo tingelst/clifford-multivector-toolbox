@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "right_contraction" overload = "false">
+<short>Computes the right contraction of two multivectors.</short>
+<long>
+<para>
+<code>right_contraction(x,y)</code> computes the right contraction of two multivectors <code>x</code> and <code>y</code>.
+This is a generalisation of the inner product of vectors. "The
+right contraction (symbol ⌊) is defined as Ak⌊Bl = ‹AkBl›(k−l)"[1]
+,
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(3,0)
+>> x = e1 + e2
+ 
+x =
+ 
+   1.0000 e1  + 1.0000 e2 
+ 
+>> y = e123
+ 
+y =
+ 
+   1.0000 e123
+ 
+>> right_contraction(x,y)
+ 
+ans =
+ 
+   0.0000 e0 
+ 
+>> right_contraction(y,x)
+ 
+ans =
+ 
+ - 1.0000 e13 + 1.0000 e23
+ 
+>> right_contraction(x,x)
+ 
+ans =
+ 
+   2.0000 e0 
+</precode>
+</examples>
+<seealso>
+<cliffun name = "left_contraction"/>
+</seealso>
+<references>
+<reference>
+<bold>Eckhard Hitzer</bold>, <italic>Introduction to Clifford's Geometric Algebra</italic>, 
+Journal of the Society of Instrument and Control Engineers, Vol. 51, No. 4, pp. 338-350, April 2012, (April 2012), 
+page 4, equation 45 <www>http://arxiv.org/pdf/1306.1660.pdf</www>
+</reference>
+</references>
+</function>
+
+<!-- $Id: right_contraction.xml 92 2016-07-28 19:56:45Z sangwine $ -->

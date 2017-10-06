@@ -1,0 +1,54 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>even :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>even</h2>
+<p>Extracts the sum of the even grades of a clifford multivector.</p>
+<h2>Description</h2>
+<p>
+<tt>even(x)</tt> extracts the sum of the even grades of a multivector, <tt>x</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(3,0)
+&gt;&gt; x = randm
+ 
+x =
+ 
+   0.0986 e0 
+ - 0.1949 e1  + 0.1591 e2  + 0.2401 e3 
+ + 0.5559 e12 - 0.0630 e13 - 0.6943 e23
+ - 0.2726 e123
+ 
+&gt;&gt; even(x)
+ 
+ans =
+ 
+   0.0986 e0 
+ + 0.5559 e12 - 0.0630 e13 - 0.6943 e23
+ 
+&gt;&gt; clifford_signature(2,2)
+&gt;&gt; x = clifford(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+ 
+x =
+ 
+   1.0000 e0  
+ + 2.0000 e1   + 3.0000 e2   + 4.0000 e3   + 5.0000 e4  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 12.0000 e123 + 13.0000 e124 + 14.0000 e134 + 15.0000 e234
+ + 16.0000 e1234
+ 
+&gt;&gt; even(x)
+ 
+ans =
+ 
+   1.0000 e0  
+ + 6.0000 e12  + 7.0000 e13  + 8.0000 e14  + 9.0000 e23  + 10.0000 e24  + 11.0000 e34 
+ + 16.0000 e1234
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc add">add</a><br>Clifford functions: <a href="bivector.html">bivector</a>, <a href="part.html">part</a>, <a href="scalar.html">scalar</a>, <a href="pseudoscalar.html">pseudoscalar</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

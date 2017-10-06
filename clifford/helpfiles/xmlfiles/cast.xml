@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "cast" overload = "true">
+<short>Cast multivector variable to different data type.</short>
+<long>
+<para>
+<code>cast(x,class)</code> casts Clifford object, <code>x</code>, 
+into a different data type, for example changing the data type of 
+the numerical basis coefficients of a multivector.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(0,2)
+>> x = randm
+ 
+x =
+ 
+   0.1389 e0
+ - 0.3224 e1 + 0.5852 e2
+ - 0.7309 e12
+ 
+>> cast(x,'int8')
+ 
+ans =
+ 
+   0.0000 e0
+ + 0.0000 e1 + 1.0000 e2
+ - 1.0000 e12
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "cast"/>
+<matlabfun name = "class"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: cast.xml 132 2017-05-17 16:53:51Z sangwine $ -->

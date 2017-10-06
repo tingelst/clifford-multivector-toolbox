@@ -1,0 +1,96 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>tril :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>tril</h2>
+<p>Extract lower triangular part.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>tril(x)</tt> extracts the lower triangular part from an array <tt>x</tt>
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(1,1)
+&gt;&gt; x = randm(4)
+ 
+x =
+ 
+     4x4 Cl(1,1) multivector array
+ 
+&gt;&gt; show(x)
+ 
+x =
+ 
+e0 *
+ 
+    0.3308    0.2183    0.9687    0.4546
+    0.6711   -0.5861    0.9264   -0.0797
+   -0.5560   -0.2699   -0.8532    0.5594
+    0.3924    0.1207    0.9300   -0.1191
+
++ e1 *
+ 
+   -0.0764    0.4598    0.1323    0.1842
+    0.5451   -0.5412    0.3461   -0.9952
+    0.3469    0.4465    0.4594    0.6953
+    0.6451    0.5745   -0.0930   -0.6664
+
++ e2 *
+ 
+   -0.6576    0.2227   -0.0277   -0.5420
+   -0.2962   -0.3384   -0.0808   -0.0380
+   -0.7248    0.8531    0.2017   -0.1290
+    0.6547   -0.6031    0.0959    0.3647
+
++ e12 *
+ 
+    0.6726   -0.8314   -0.2083   -0.6824
+    0.4059   -0.4991    0.1242    0.0412
+   -0.2126   -0.0043   -0.1426    0.4324
+    0.0352    0.5401    0.3424    0.6394
+
+&gt;&gt; y = tril(x)
+ 
+y =
+ 
+     4x4 Cl(1,1) multivector array
+ 
+&gt;&gt; show(y)
+ 
+y =
+ 
+e0 *
+ 
+    0.3308         0         0         0
+    0.6711   -0.5861         0         0
+   -0.5560   -0.2699   -0.8532         0
+    0.3924    0.1207    0.9300   -0.1191
+
++ e1 *
+ 
+   -0.0764         0         0         0
+    0.5451   -0.5412         0         0
+    0.3469    0.4465    0.4594         0
+    0.6451    0.5745   -0.0930   -0.6664
+
++ e2 *
+ 
+   -0.6576         0         0         0
+   -0.2962   -0.3384         0         0
+   -0.7248    0.8531    0.2017         0
+    0.6547   -0.6031    0.0959    0.3647
+
++ e12 *
+ 
+    0.6726         0         0         0
+    0.4059   -0.4991         0         0
+   -0.2126   -0.0043   -0.1426         0
+    0.0352    0.5401    0.3424    0.6394
+</pre>
+
+<h2>See Also</h2>Clifford function: <a href="triu.html">triu</a><br>MATLAB&reg; function: <a href="matlab:doc tril">tril</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

@@ -1,0 +1,35 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>mean :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>mean</h2>
+<p>Average or mean value<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Syntax</h2><p><tt>Y = mean(X, dim)</tt></p>
+<h2>Description</h2>
+<p>
+<tt>mean(X, dim)</tt> computes the mean values of the elements of the
+multivector array <tt>X</tt> along dimension <tt>dim</tt>. If
+omitted, <tt>dim</tt> defaults to the columns of <tt>X</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; A = [e1 e2; e2 e1]
+ 
+A = 2x2 Cl(0,3) multivector array
+ 
+&gt;&gt; show(mean(A))
+ 
+e1 *
+ 
+    0.5000    0.5000
+
++ e2 *
+ 
+    0.5000    0.5000
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc mean">mean</a><br>
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

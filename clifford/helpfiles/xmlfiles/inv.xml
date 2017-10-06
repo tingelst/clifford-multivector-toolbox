@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "inv" overload = "true">
+<short>Inverse of a multivector (matrix).</short>
+<long>
+<para>
+<code>inv(x)</code> computes the inverse of any invertable argument multivector <code>x</code>,
+including that of matricies of multivectors.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm(2)
+ 
+x =
+ 
+     2x2 Cl(1,1) multivector array
+ 
+>> show(x*inv(x))
+ 
+e0 *
+ 
+    1.0000   -0.0000
+   -0.0000    1.0000
+
++ e1 *
+ 
+   1.0e-14 *
+
+   -0.0222   -0.0222
+    0.6078   -0.0250
+
++ e2 *
+ 
+   1.0e-14 *
+
+   -0.0333    0.0833
+    0.2220    0.0777
+
++ e12 *
+ 
+   1.0e-14 *
+
+   -0.0111    0.0722
+    0.3608    0.0222
+</precode>
+If x is not invertable (i.e. is a divisor of zero) the result will contain
+NaNs or infinities.
+<precode>
+>> clifford_signature(1,1)
+>> x = e1 - e2
+ 
+x =
+ 
+   1.0000 e1 - 1.0000 e2
+ 
+>> inv(x)
+ 
+ans =
+ 
+   NaN e0
+ - Inf e1 + Inf e2
+ + NaN e12
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "inv"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: inv.xml 132 2017-05-17 16:53:51Z sangwine $ -->

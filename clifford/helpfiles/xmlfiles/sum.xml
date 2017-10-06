@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "sum" overload = "true">
+<short>Sum of elements.</short>
+<long>
+<para>
+<code>sum(x)</code> computes the sum of all elements in object <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+>> y = clifford(4,3,2,1)
+ 
+y =
+ 
+   4.0000 e0
+ + 3.0000 e1 + 2.0000 e2
+ + 1.0000 e12
+ 
+>> z = [x,y]
+ 
+z =
+ 
+     1x2 Cl(1,1) multivector array
+ 
+>> sum(z)
+ 
+ans =
+ 
+   5.0000 e0
+ + 5.0000 e1 + 5.0000 e2
+ + 5.0000 e12
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "sum"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: sum.xml 132 2017-05-17 16:53:51Z sangwine $ -->

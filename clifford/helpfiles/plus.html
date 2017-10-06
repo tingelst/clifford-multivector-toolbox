@@ -1,0 +1,51 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>plus :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>plus</h2>
+<p>+ Plus.<br>(Clifford overloading of standard MATLAB&reg; function)
+</p>
+<h2>Description</h2>
+<p>
+<tt>plus(x,y)</tt> adds element <tt>x</tt> to element <tt>y</tt>.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; clifford_signature(2,2)
+&gt;&gt; e123 + 3*e4
+ 
+ans =
+ 
+   3.0000 e4  
+ + 1.0000 e123
+ 
+&gt;&gt; x = randm
+ 
+x =
+ 
+ - 0.0854 e0
+ - 0.3905 e1 - 0.2916 e2
+ - 0.8690 e12
+ 
+&gt;&gt; y = randm
+ 
+y =
+ 
+ - 0.4205 e0
+ - 0.6912 e1 - 0.2524 e2
+ - 0.5308 e12
+ 
+&gt;&gt; plus(x,y)
+ 
+ans =
+ 
+ - 0.5059 e0
+ - 1.0817 e1 - 0.5440 e2
+ - 1.3998 e12
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc plus">plus</a><br>Clifford functions: <a href="minus.html">minus</a>, <a href="bsxfun.html">bsxfun</a>, <a href="mtimes.html">mtimes</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

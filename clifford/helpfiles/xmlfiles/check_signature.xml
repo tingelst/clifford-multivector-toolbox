@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "check_signature" overload = "false">
+<short>Checks that the signature of an object x matches with the current signature 
+and raises an error if they do not match.</short>
+<long>
+<para>
+<code>check_signature(x)</code> checks that the argument, <code>x</code>, 
+is an object which lies within the current Clifford Signature.
+</para>
+</long>
+<examples>
+When the signature is correct:
+<precode>
+>> clifford_signature(2,2)
+>> x = randm
+ 
+x =
+ 
+   0.0202 e0  
+ - 0.3506 e1   - 0.1745 e2   - 0.2495 e3   + 0.5525 e4  
+ - 0.1447 e12  + 0.1758 e13  - 0.0452 e14  + 0.2089 e23  - 0.1798 e24  - 0.3296 e34 
+ - 0.3344 e123 + 0.1148 e124 - 0.0417 e134 - 0.0461 e234
+ + 0.3336 e1234
+ 
+>> check_signature(x)
+>> 
+</precode>
+When the signature is incorrect (retaining the same x value from before):
+<precode>
+>> clifford_signature(1,1)
+>> check_signature(x)
+Error using clifford/check_signature (line 56)
+Clifford multivector has a signature different to that of the current Clifford algebra.
+</precode>
+</examples>
+<seealso>
+<cliffun name = "clifford_signature"/>
+<cliffun name = "get_signature"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: check_signature.xml 92 2016-07-28 19:56:45Z sangwine $ -->

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "size" overload = "true">
+<short>Size of matrix.</short>
+<long>
+<para>
+<code>size(x)</code> returns the dimensions of a matrix <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = randm(4)
+ 
+x =
+ 
+     4x4 Cl(1,1) multivector array
+ 
+>> size(x)
+
+ans =
+
+     4     4
+
+>> x = randm(4)
+ 
+x =
+ 
+     4x4 Cl(1,1) multivector array
+ 
+>> [y,z] = size(x)
+
+y =
+
+     4
+
+
+z =
+
+     4
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "size"/>
+<cliffun name = "length"/>
+<cliffun name = "numel"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: size.xml 132 2017-05-17 16:53:51Z sangwine $ -->

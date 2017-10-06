@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Clifford Toolbox Overview</title>
+<link rel="stylesheet" href="clifstyle.css" type="text/css">
+</head>
+<body>
+<h1>Introduction to the Toolbox</h1>
+
+<table>
+<tr>
+<td><a href = "#clif">Clifford Algebras</a></td>
+<td><a href = "#save">Save/Load (Matlab Functions)</a></td>
+<td><a href = "#extr">Extracting Multivector Components</a></td>
+<td><a href = "#test">Test Code - How to run</a></td>
+<td><a href = "#init">Initalising the Algebra</a></td>
+<td><a href = "#data">Data Types</a></td>
+<td><a href = "#crea">Creating Multivectors</a></td>
+</tr>
+</table></br>
+
+<a name = "clif"></a>
+<h1>Clifford Algebras</h1>
+<p>
+Clifford algebras, developed by W.K. Clifford, finalized the fundamental concept of directed numbers. "Any Clifford algebra Cl(V) is generated from an inner-product
+vector space (V, a · b : a, b ∈ V 7→ R) by Clifford’s geometric product setting the geometric product of any vector with itself equal to their inner product: aa = a · a. We
+indeed have the universal property, that any isometry from the vector space V into an inner-product algebra A over the field K can be uniquely extended to an isometry
+from the Clifford algebra Cl(V) into A. The Clifford algebra Cl(V) is the unique associative and multilinear algebra with this property" [1]</br>
+-------------------</br>
+[1] Eckhard Hitzer, ‘Introduction to Clifford's Geometric Algebra’,
+<i>Journal of the Society of Instrument and Control Engineers</i>,
+Vol. 51, No. 4, pp. 338-350, April 2012.
+</p>
+<a name = "desi"></a>
+<h1>Design Principles</h1>
+<p>
+The fundamental design principle of the toolbox is that operations on Clifford multivector 
+arrays should work in the same way as normal Matlab operations on real and complex arrays. 
+Therefore a simple guideline on using the toolbox is to do things as you normally would in 
+Matlab. For example, to concatenate two arrays to make a larger array, you use square brackets, 
+commas and colons, e.g.
+<pre>
+[A, B; C, D]
+</pre>
+will join four arrays to make a larger array in the form of a 2 x 2 matrix or block matrix. 
+If it happens that any or all of A, B, C and D are Clifford multivector arrays, the toolbox 
+will be invoked to concatenate them together using functions in the toolbox that overload the 
+normal Matlab functions.
+</p>
+<p>
+Further reading on the implementation of the toolbox can be found in:<br>
+Sangwine, S. J. and Hitzer, E., ‘Clifford Multivector Toolbox (for MATLAB)’,
+<i>Advances in Applied Clifford Algebras</i>, <b>27</b>, (1), March 2017, 539-558.
+<a href="http://dx.doi.org/10.1007/s00006-016-0666-x">doi:10.1007/s00006-016-0666-x</a>.
+(A preprint version is available
+<a href = "http://privatewww.essex.ac.uk/~sjs/publications/author_final.pdf">here</a>.)
+</p>
+<a name = "save"></a>
+<h1>Save/Load (Matlab Functions)</h1>
+<p>
+A multivector variable can be saved to a .MAT file using the Matlab save function. 
+It follows that a previously saved variable can be loaded using the load function:
+MATLAB Save Function: <a href="matlab:doc save">save</a><br>
+MATLAB Load Function: <a href="matlab:doc load">load</a><br>
+</p>
+<a name = "extr"></a>
+<h1>Extracting Multivector Components</h1>
+<p>
+There are functions for extracting components from a multivector. Each of these functions returns a multivector. 
+In the examples that follow, the following multivector was created previously:
+<pre>
+y =
+ 
+   0.1420 e0  
+ - 0.2554 e1   + 0.1517 e2   + 0.3448 e3   + 0.1034 e4  
+ + 0.2188 e12  + 0.1537 e13  - 0.0642 e14  + 0.0622 e23  - 0.1665 e24  + 0.1879 e34 
+ - 0.2426 e123 - 0.2261 e124 - 0.1712 e134 - 0.6227 e234
+ + 0.3042 e1234
+</pre>
+<ul>
+<li><h2>Using Bivector</h2>
+bivector() can be used to extract the bivector element of a multivector (grade 2):
+<pre>x = bivector(y)</pre>
+This will extract something in the form: 
+<pre>0.2188 e12  + 0.1537 e13  - 0.0642 e14  + 0.0622 e23  - 0.1665 e24  + 0.1879 e34</pre>
+where we see that only bivector components are present.</li>
+<li><h2>Using Even</h2>
+even() can be used to extract all of the even grades of a multivector (scalar, bivector, quadrivector etc.):
+<pre>x = even(y)</pre>
+This will extract something in the form:    
+<pre>
+   0.1420 e0  
+ + 0.2188 e12  + 0.1537 e13  - 0.0642 e14  + 0.0622 e23  - 0.1665 e24  + 0.1879 e34 
+ + 0.3042 e1234</pre></li>
+<li><h2>Using Grade</h2>
+grade() can be used to extract a specific grade of vectors from the multivector (0 = scalar, 1 = vectors, 2 = bivectors etc.):
+<pre>x = grade(y,3)</pre>
+This will extract something in the form:
+<pre>- 0.2426 e123 - 0.2261 e124 - 0.1712 e134 - 0.6227 e234</pre></li>
+<li><h2>Using Odd</h2>
+odd() can be used to extract all of the odd grades of a multivector (vector, trivector etc.):
+<pre>x = odd(y)</pre>
+This will extract something in the form:
+<pre>
+ - 0.2554 e1   + 0.1517 e2   + 0.3448 e3   + 0.1034 e4  
+ - 0.2426 e123 - 0.2261 e124 - 0.1712 e134 - 0.6227 e234
+</pre></li>
+<li><h2>Using Part</h2>
+part() can be used to extract the numeric value from a specific part of a multivector:
+<pre>x = part(y,3)</pre>
+This will extract the value from the third element in the multivector (as indexes start from 1 following the normal Matlab convention):
+<pre>0.1517</pre></li>
+<li><h2>Using Pseudoscalar</h2>
+pseudoscalar() can be used to extract the psedoscalar element in a multivector (usually the highest grade):
+<pre>x = pseudoscalar(y)</pre>
+This will extract something in the form:
+<pre>0.3042 e1234</pre></li>
+<li><h2>Using Scalar</h2>
+scalar() can be used to extract the scalar element in the multivector (usually denoted by e0):
+<pre>x = scalar(y)</pre>
+This will extract something in the form:
+<pre>0.1420 e0</pre></li>
+<li><h2>Using Trivector</h2>
+trivector() can be used to extract the trivector element of a multivector (grade 3):
+<pre>x = trivector(y)</pre>
+This will extract something in the form: 
+<pre>- 0.2426 e123 - 0.2261 e124 - 0.1712 e134 - 0.6227 e234</pre></li>
+<li><h2>Using Vector</h2>
+vector() can be used to extract the vector element of a multivector (grade 1):
+<pre>x = vector(y)</pre>
+This will extract something in the form: 
+<pre> - 0.2554 e1   + 0.1517 e2   + 0.3448 e3   + 0.1034 e4</pre></li>
+</ul>
+</p>
+<a name = "test"></a>
+<h1>Test Code - How to run</h1>
+<p>
+Once all of the necessary steps have been undertaken to install the toolbox under MATLAB, you may test the code to check
+that the installation was successful. This is done from the MATLAB command window by typing the command: 
+<pre>clifford_test</pre>
+which will run tests on many parts of the toolbox and will allow you to confirm that installation is correct.
+If correct it should end with the lines:
+<pre>
+Elapsed time is 600.803826 seconds.
+All tests completed without error.
+</pre>
+</p>
+<a name = "init"></a>
+<h1>Initalising the Algebra</h1>
+<p>
+<h2>Implementation restrictions</h2>
+As far as possible, we have designed the toolbox internal implementation so
+that there are no restrictions other than available memory that will limit
+the maximum dimension of algebra that can be initialized. When an algebra
+is initialized with the function clifford_signature(p, q, r), an internal
+descriptor is created. This is a global variable which is not by default
+visible in the user's workspace, although it can be made visible by typing
+the command 'global clifford_descriptor', or displayed in the command
+window by the command 'descriptor'. Two key integer fields within the
+descriptor determine the size of algebra: n is the number of basis vectors
+e1, e2, e3, ..., en; and m is the total number of numeric components in a
+multivector array. m is equal to 2^n.</br></br>
+
+In order to initialise an algebra, the clifford_signature function has to
+compute the multiplication table of the algebra. This is stored in two
+tables, one for the sign, and one for the index. When two basis elements
+are multiplied (e.g. e1 times e23) the product has a sign which depends on
+the algebra, and the result must be stored in the appropriate element of
+the multivector result - independent of the algebra (in the example e123).
+The sign is computed by the function clifford_sign_table, which returns a
+two-dimensional array of int8 values, and the size of this array is m^2
+bytes. The index table is also m-by-m, but it must contain larger integers,
+to permit the initialisation of algebras with more than 256 elements in
+each multivector. The next available Matlab integer type has 16 bits, and
+thus the size of the index array is 2 m^2 bytes. The 16-bit index type
+"limits" the size of algebra to 65536 elements in each multivector. In
+practice, this limit could not be reached because of limitations on memory
+and the time to compute the multiplication table.</br></br>
+
+So, the memory usage of the sign and index arrays is 3 m^2 bytes. An algebra
+with n=10 (and therefore m=1024) requires 3M bytes of memory to store the
+sign and index arrays. Adding one to n doubles the value of m, and therefore
+quadruples the size of the sign and index arrays. With n=16, m=65536, and
+3 m^2 = 12G bytes which is probably more than could be supported on most
+personal computers in 2015.</br></br>
+
+A second issue regarding size of algebra is the existence of parameterless
+functions for the basis elements of the algebra. However, even with n=16 and
+m=65536, it is not impossible to create this number of small function files
+on disk. Each file is less than 500 bytes in size, so only 32K bytes of disk
+would be needed to store them all.</br></br>
+
+Multivectors are represented internally using cell arrays, one array for
+each numeric component. Some of these arrays may be empty, representing
+components with an exact zero value (or array of exact zeros to be precise).
+The function dump(a) will display the content of a multivector for debugging
+purposes. Each multivector contains a copy of the signature that was in use
+when the multivector was created.</br></br>
+
+The global variable clifford_descriptor contains the initialised parameters
+of the algebra. This variable may be saved to a file using the Matlab save
+function and loaded back in using load. For very large algebras where the
+time taken to initialise the algebra is significant, saving the descriptor
+to file could be much faster than re-initialising it every time.</br></br>
+
+<h2>Single algebra paradigm</h2>
+The current design of the toolbox assumes that one algebra is in use at any
+time. However, each multivector that is created contains a copy of the
+signature in use at the time it was created. This means that you can change
+the current algebra, leaving multivectors in memory, and return later to an
+algebra that you used previously by (re)initialising that algebra, and then
+use the multivectors previously created.</br></br>
+
+To initialise an algebra, use the function
+<pre>
+clifford_signature
+</pre>.
+This function takes two or three parameters, which are respectively the number 
+of basis vectors with positive, negative and zero squares (conventionally these are called p, q and r). 
+If r is omitted, it is taken to be zero. Calling this function without parameters causes a summary of 
+the current algebra to be displayed. When you initialise an algebra for the first time, the multiplication 
+table and other parameters of the algebra have to be computed. This can take significant time for larger 
+algebras. However, on a second and subsequent intialization, even after restarting Matlab, the algebra is 
+initialised from information saved to disk in a cache (see next section).
+
+<h2>Descriptor cacheing</h2>
+Initialisation of an algebra requires significant computation. From version
+1.0 of the toolbox, the descriptors are written to file in a directory
+called cache, and the function clifford_signature will load the descriptor
+from this cache if it is available. The files in the cache are standard
+Matlab MAT files. There are two possible issues with this implementation:</br></br>
+
+1. The format of the descriptor may change in a later release of the
+   toolbox, which could lead to incompatibility with cached descriptors.</br></br>
+
+2. The format of the MAT file may change in a later release of MATLAB.</br></br>
+
+Both of these issues can be simply handled by deleting the cache directory,
+which will cause the clifford_signature function to re-create the cache as
+it initialises new algebras. However, to reduce the need to do this in case
+1, the toolbox writes the files to a hierarchy of sub-directories using the
+major and minor version numbers of the toolbox to name the sub-directories.
+This ensures that each version of the toolbox writes its cached files to
+different sub-directories, so no conflict can occur if the descriptor
+format is changed. Of course, the downside to this is that each new release
+of the toolbox has to re-create all the descriptors as it initialises each
+algebra.</br></br>
+</p>
+<a name = "data"></a>
+<h1>Data Types</h1>
+<p>
+Multivectors themselves and any objects associated with multivectors are of type clifford. 
+You can initalise multivectors with the methods below using any numeric data type including int8 or double.
+</p>
+<a name = "crea"></a>
+<h1>Creating Multivectors</h1>
+<p>
+<ul>
+<li><h2>randm</h2>
+A random multivector in the current Clifford algebra can be created using:
+<pre>x = randm</pre></li>
+<li><h2>From Existing Real Arrays</h2>
+Any existing numeric arrays, including those read in from files, may be used as the numerical
+components of a multivector, but they will be stored in the scalar part, 
+unless they are already multivectors.
+<pre>
+>> x = [1,2,3,4,5]
+
+x =
+
+     1     2     3     4     5
+
+>> clifford(x)
+ 
+ans =
+ 
+     1x5 Cl(1,1) multivector array
+ 
+>> show(ans)
+ 
+ans =
+ 
+e0 *
+ 
+     1     2     3     4     5
+</pre></li>
+<li><h2>Using e1.* etc</h2>
+Multivectors can be constructed by multiplying numeric arrays by the basis elements of the current algebra (these are implemented as parameterless functions by the toolbox):
+<pre>x = e0*4 + e1*2 - e2*2 + e12*3</pre></li>
+<li><h2>Clifford Constructor</h2>
+A multivector can be constructed by providing the Clifford constructor function with the correct number of arguments for the current algebra, for example in Clifford(1,1):
+<pre>
+x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+</pre></li>
+</ul>
+</p>
+<h4>&copy; 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4>
+<p><a href="license.html">License terms.</a></p>
+</body>
+</html>
+
+<!-- $Id: overview.html 116 2017-04-17 18:44:16Z sangwine $ -->

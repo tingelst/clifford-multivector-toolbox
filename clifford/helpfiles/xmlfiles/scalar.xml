@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "scalar" overload = "false">
+<short>Extracts the scalar component of a clifford multivector. The result is numeric, not a multivector.</short>
+<long>
+<para>
+<code>scalar(x)</code> extracts the scalar component of a multivector <code>x</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+>> x = clifford(1,2,3,4)
+ 
+x =
+ 
+   1.0000 e0
+ + 2.0000 e1 + 3.0000 e2
+ + 4.0000 e12
+ 
+>> scalar(x)
+ 
+ans =
+ 
+   1.0000 e0
+ 
+>> y = randm
+ 
+y =
+ 
+ - 0.4631 e0
+ + 0.6978 e1 + 0.5373 e2
+ - 0.0999 e12
+ 
+>> scalar(y)
+ 
+ans =
+ 
+ - 0.4631 e0
+</precode>
+</examples>
+<seealso>
+<cliffun name = "scalar_product"/>
+<cliffun name = "part"/>
+<cliffun name = "even"/>
+<cliffun name = "odd"/>
+<cliffun name = "bivector"/>
+<cliffun name = "pseudoscalar"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: scalar.xml 92 2016-07-28 19:56:45Z sangwine $ -->

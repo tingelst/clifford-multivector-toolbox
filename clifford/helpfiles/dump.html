@@ -1,0 +1,37 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>dump :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>dump</h2>
+<p>Outputs a human readable dump of the contents of the
+  multivector (for debugging purposes).</p>
+<h2>Description</h2>
+<p>
+<tt>dump(x)</tt> outputs the current signature of the argument, <tt>x</tt>,
+and also the multivector components, which can be used for debugging. The sizes of the components are shown.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; x = randm
+ 
+x =
+ 
+   0.0038 e0
+ - 0.9163 e1 - 0.1382 e2
+ + 0.3758 e12
+ 
+&gt;&gt; dump(x)
+Signature: 1  1  0
+ 
+Multivector components:
+1: [1  1]  double
+2: [1  1]  double
+3: [1  1]  double
+4: [1  1]  double
+</pre>
+
+<h2>See Also</h2>Clifford functions: <a href="get_signature.html">get_signature</a>, <a href="length.html">length</a>, <a href="isempty.html">isempty</a>, <a href="show.html">show</a>, <a href="disp.html">disp</a>, <a href="display.html">display</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

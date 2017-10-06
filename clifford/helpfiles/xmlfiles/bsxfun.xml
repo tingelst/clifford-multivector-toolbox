@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "cliffunction.dtd">
+<function name = "bsxfun" overload = "true">
+<short>Binary Singleton Expansion Function.</short>
+<long>
+<para>
+<code>bsxfun(fun,x,y)</code> Applies an element by element binary operation, denoted by <code>fun</code>,
+ on two Clifford objects, <code>x</code> and <code>y</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> clifford_signature(1,1)
+x =
+ 
+   0.1389 e0
+ - 0.3224 e1 + 0.5852 e2
+ - 0.7309 e12
+ 
+>> y = randm
+ 
+y =
+ 
+ - 0.1973 e0
+ - 0.4659 e1 + 0.6160 e2
+ + 0.6037 e12
+ 
+>> bsxfun(@plus,x,y)
+ 
+ans =
+ 
+ - 0.0584 e0
+ - 0.7884 e1 + 1.2012 e2
+ - 0.1272 e12
+ </precode>
+</examples>
+<seealso>
+<matlabfun name = "bsxfun"/>
+<cliffun name = "minus"/>
+<cliffun name = "plus"/>
+<cliffun name = "mtimes"/>
+<cliffun name = "mdivide"/>
+</seealso>
+<!--<references>
+</references>-->
+</function>
+
+<!-- $Id: bsxfun.xml 132 2017-05-17 16:53:51Z sangwine $ -->

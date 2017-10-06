@@ -1,0 +1,47 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Eckhard Hitzer, 2011-2017.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>isexplicit :: Functions (Clifford Toolbox Function Reference)
+</title><link rel="stylesheet" href="clifstyle.css" type="text/css"></head><body><h1>Clifford Function Reference</h1><h2>isexplicit</h2>
+<p>True for a clifford multivector without empty components.
+ This means that every component of the multivector contains a numeric
+ array, none is empty.</p>
+<h2>Description</h2>
+<p>
+<tt>isexplicit(x)</tt> checks that the multivector, <tt>x</tt>,
+has no empty components.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; x = randm
+ 
+x =
+ 
+   0.2018 e0
+ - 0.3179 e1 - 0.5535 e2
+ - 0.7429 e12
+ 
+&gt;&gt; isexplicit(x)
+
+ans =
+
+     1
+
+&gt;&gt; y = bivector(x)
+ 
+y =
+ 
+ - 0.7429 e12
+ 
+&gt;&gt; isexplicit(y)
+
+ans =
+
+     0
+</pre>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc isempty">isempty</a><br>Clifford functions: <a href="empty.html">empty</a>, <a href="numel.html">numel</a>, <a href="length.html">length</a><br>
+
+<h4>(c) 2011-2017 Stephen J. Sangwine and Eckhard Hitzer.</h4><p><a href="license.html">License terms.</a></p></body></html>

@@ -1,0 +1,27 @@
+Clifford Multivector Toolbox for Matlab
+---------------------------------------
+
+After download, you will find detailed installation instructions in the
+file Read_me.txt and release notes in the file Release_notes.txt.
+
+This file provides a summary of what is needed to install the toolbox
+before you download it.
+
+1. You will need a functioning copy of Matlab. The toolbox may work under
+   Octave, and this may be supported in a later release, but for now we
+   are developing the toolbox with Matlab only.
+
+2. Installation consists of the following steps:
+
+   a. Unzip the downloaded file.
+   b. Place the unzipped folder in a suitable location (NOT inside the
+      MATLAB installation itself where MATLAB toolboxes are installed)
+   c. Add the toolbox folder to the Matlab path.
+   d. (Optional) Run the test code provided as a check that all is OK.   
+
+Steve Sangwine
+Eckhard Hitzer
+
+July 2015
+
+$Id: README 128 2017-05-10 13:49:28Z sangwine $
